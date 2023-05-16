@@ -1,0 +1,69 @@
+base:
+  search: Rechercher
+home:
+  title: La bone arive
+  welcome: La bone arive
+language: Parlement
+rankings:
+  title: Pllacements
+  country: Payiz
+  event: Assaot
+  type: Tipe
+  show: Vaer
+  rankings_for: "Pllacement de :"
+  name: Nom
+  result: Fezûre
+  competition: Course
+  details: Detâil
+  single: Meillou temp
+  average: Mouayene
+  country_names:
+    anj: Anjou
+    arp: Arpitanie
+    ast: Asturies
+    auv: Aovergne
+    bre: Bourgogne
+    bzh: Bertègn
+    cat: Catalogne
+    cha: Champagne
+    cor: Corse
+    cym: Payiz de Gale
+    dau: Dauphiné
+    els: Alzace
+    eng: Angoumois
+    euh: Payiz Baqse
+    for: Forez
+    frc: Franche-Contë
+    gal: Galice
+    ker: Cornouaille
+    kur: Kurdistan
+    lou: Loraine
+    nor: Normandie
+    occ: Oxitanie
+    poe: Paitou
+    pro: Provence
+    sav: Savoué
+    sco: Ecosse
+    tué: Irlande du Haot
+  events:
+    '222': Qhube 2x2x2
+    '333': Qhube 3x3x3
+    '444': Qhube 4x4x4
+    '555': Qhube 5x5x5
+    '666': Qhube 6x6x6
+    '777': Qhube 7x7x7
+    333bf: 3x3x3 bôgné
+    333fm: 3x3x3 meins de mouvements possibl
+    333oh: 3x3x3 o ene main
+    333ft: 3x3x3 o les piës
+    clock: Clock
+    minx: Megaminx
+    pyram: Pyraminx
+    skewb: Skewb
+    sq1: Square-1
+    444bf: Qhube 4x4x4 bôgné
+    555bf: Qhube 5x5x5 bôgné
+    magic: Magic
+    mmagic: Master Magic
+translation:
+  title: Terlaterie

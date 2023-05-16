@@ -1,0 +1,74 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    {{ 'rankings.title'|trans }}
+{% endblock %}
+
+{% block body %}
+    <style>
+        .small-flag {
+            width: 20px;
+        }
+        .medium-flag {
+            width: 40px;
+        }
+        #rankings-form {
+            margin: 20px;
+        }
+    </style>
+
+    <div id="content">
+        <div id="rankings-form">
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col">
+                    {{ form_row(form.country) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.event) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.type) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.submit, { 'label': 'rankings.show' | trans }) }}
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+
+        <div id="rankings">
+            {% set flagUrl = 'flags/' ~ country.img %}
+            <h3 >{{ 'rankings.rankings_for' | trans }}</h3>
+            <h3 class="text-center"><img class="medium-flag" src="{{ asset(flagUrl) }}" alt=""> {{ ('rankings.country_names.' ~ country.short) | trans }} ({{ country.name | trans }}) — {{ ('rankings.events.' ~ rankingsEvent.id) | trans }} - {{ ('rankings.' ~ type) | trans }}</h3>
+            <table id="rankings-table" class="table table-dark table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">{{ 'rankings.name' | trans }}</th>
+                        <th scope="col">{{ 'rankings.result' | trans }}</th>
+                        <th scope="col">{{ 'rankings.country' | trans }}</th>
+                        <th scope="col">{{ 'rankings.competition' |trans }}</th>
+                        {% if type == 'average' %}
+                            <th scope="col">{{ 'rankings.details' |trans }}</th>
+                        {% endif %}
+                    </tr>
+                </thead>
+                <tbody>
+                {% for key, data in rankings %}
+                    <tr>
+                        <td>{{ key+1 }}</td>
+                        <td><a href="https://www.worldcubeassociation.org/persons/{{ data.personId }}" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">{{ data.personName }}</a></td>
+                        <td>{{ data.res }}</td>
+                        <td><img class="small-flag" src="{{ asset(flagUrl) }}" alt=""> {{ country.name }}</td>
+                        <td><a href="https://www.worldcubeassociation.org/competitions/{{ data.competitionId }}" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">{{ data.competitionId }}</a></td>
+                        {% if type == 'average' %}
+                            <td>{{ data.value1 }} {{ data.value2 }} {{ data.value3 }} {{ data.value4 }} {{ data.value5 }}</td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

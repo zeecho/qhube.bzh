@@ -1,0 +1,71 @@
+base:
+  search: Search
+home:
+  title: Home
+  welcome: Welcome
+language: Language
+rankings:
+  title: Rankings
+  country: Country
+  event: Event
+  type: Type
+  show: Show
+  rankings_for: "Rankings for:"
+  name: Name
+  result: Result
+  competition: Competition
+  details: Detail
+  single: Single
+  average: Average
+  country_names:
+    anj: Anjou
+    arp: Arpitania
+    ast: Asturias
+    auv: Auvergne
+    bre: Burgundy
+    bzh: Brittany
+    cat: Catalonia
+    cha: Champagne
+    cor: Corsica
+    cym: Wales
+    dau: Dauphiné
+    els: Alsace
+    eng: Angoumois
+    euh: Basque Country
+    for: Forez
+    frc: Franche-Comté
+    gal: Galicia
+    ker: Cornwall
+    kur: Kurdistan
+    lou: Lorraine
+    nor: Normandy
+    occ: Occitania
+    poe: Poitou
+    pro: Provence
+    sav: Savoy
+    sco: Scotland
+    tué: Northern Ireland
+  events:
+    333: 3x3x3 Cube
+    222: 2x2x2 Cube
+    444: 4x4x4 Cube
+    555: 5x5x5 Cube
+    666: 6x6x6 Cube
+    777: 7x7x7 Cube
+    3333bf: 3x3x3 Blindfolded
+    333fm: 3x3x3 Fewest Moves
+    333oh: 3x3x3 One-Handed
+    clock: Clock
+    minx: Megaminx
+    pyram: Pyraminx
+    skewb: Skewb
+    sq1: Square-1
+    444bf: 4x4x4 Blindfolded
+    555bf: 5x5x5 Blindfolded
+    333mbf: 3x3x3 Multi-Blind
+    333ft: 3x3x3 With Feet
+    magic: Magic
+    mmagic: Master Magic
+    333mbo: 3x3x3 Multi-Blind Old Style
+translation:
+  title: Translation

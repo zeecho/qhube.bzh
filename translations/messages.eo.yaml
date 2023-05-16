@@ -1,0 +1,71 @@
+base:
+  search: Serĉi
+home:
+  title: Hejmo
+  welcome: Bonvenon
+language: Lingvo
+rankings:
+  title: Rangoj
+  country: Lando
+  event: Konkursero
+  type: Tipo
+  show: Vidi
+  rankings_for: "Rangoj por:"
+  name: Nomo
+  result: Rezulto
+  competition: Konkurso
+  details: Detalo
+  single: Plej bona tempo
+  average: Mezo
+  country_names:
+    anj: Anĵuo
+    arp: Arpitanio
+    ast: Asturio
+    auv: Aŭvernjo
+    bre: Burgundio
+    bzh: Bretonio
+    cat: Katalunio
+    cha: Ĉampanjo
+    cor: Korsiko
+    cym: Kimrio
+    dau: Daŭfenio
+    els: Alzaco
+    eng: Angulemio
+    euh: Eŭskio
+    for: Forez
+    frc: Franĉkonteo
+    gal: Galegio
+    ker: Kornvalo
+    kur: Kurdio
+    lou: Loreno
+    nor: Normandio
+    occ: Okcitanio
+    poe: Potevio
+    pro: Provenco
+    sav: Savojo
+    sco: Skotlando
+    tué: Nord-Irlando
+  events:
+    '222': Kubo 2x2x2
+    '333': Kubo 3x3x3
+    '444': Kubo 4x4x4
+    '555': Kubo 5x5x5
+    '666': Kubo 6x6x6
+    '777': Kubo 7x7x7
+    333bf: 3x3x3 blinde
+    333fm: 3x3x3 optimuma solvo
+    333oh: 3x3x3 unumane
+    333ft: 3x3x3 piede
+    clock: Kloko
+    minx: Megaminkso
+    pyram: Piraminkso
+    skewb: Skjubo
+    sq1: Skŭaro-1
+    444bf: Kubo 4x4x4 blinde
+    555bf: Kubo 5x5x5 blinde
+    333mbf: 3x3x3 pluraj kuboj blinde
+    magic: Maĝiko
+    mmagic: Mastra Maĝiko
+    333mbo: '3x3x3: pluraj kuboj blinde (malnova stilo)'
+translation:
+  title: Tradukado
