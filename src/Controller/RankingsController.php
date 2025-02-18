@@ -82,7 +82,7 @@ class RankingsController extends AbstractController
                 'attr' => ['class' => 'form-select'],
                 'label_attr' => ['class' => 'form-label'],
                 'label' => 'rankings.country',
-                'placeholder' => 'rankings.country',
+                'placeholder' => '-',
                 'data' => $country,
             ])
             ->add('event', ChoiceType::class, [
@@ -93,7 +93,7 @@ class RankingsController extends AbstractController
                 'choice_label' => function ($eventLabel, $key, $value) {
                     return 'rankings.events.' . $eventLabel;
                 },
-                'placeholder' => 'rankings.event',
+                'placeholder' => '-',
                 'data' => $event
             ])
             ->add('type', ChoiceType::class, [
@@ -104,7 +104,7 @@ class RankingsController extends AbstractController
                 'attr' => ['class' => 'form-select'],
                 'label_attr' => ['class' => 'form-label'],
                 'label' => 'rankings.type',
-                'placeholder' => 'rankings.type',
+                'placeholder' => '-',
                 'data' => $type
             ])
             ->add('submit', SubmitType::class, [

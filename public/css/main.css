@@ -1,12 +1,15 @@
 .small-flag {
     width: 20px;
 }
+
 .medium-flag {
     width: 40px;
 }
+
 #rankings-form {
     margin: 20px;
 }
+
 .button-under-form {
     margin-top: 5px;;
 }
