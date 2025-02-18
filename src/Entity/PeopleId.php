@@ -41,9 +41,9 @@ class PeopleId
         return $this->countryShort;
     }
 
-    public function setCountryShort(string $countryShort): self
+    public function setCountryCode(string $countryCode): self
     {
-        $this->countryShort = $countryShort;
+        $this->countryShort = $countryCode;
 
         return $this;
     }

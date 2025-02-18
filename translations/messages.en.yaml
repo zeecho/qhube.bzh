@@ -1,12 +1,19 @@
+current_language: English
 base:
   search: Search
+  profile: Profile
+  signin: Login with the WCA
+  signout: Logout
 home:
   title: Home
   welcome: Welcome
-language: Language
+language: "Language:"
+submit: Valider
 rankings:
   title: Rankings
+  data_from: 'Note: Except for the countries, all data come from the %wcaLink% (using their %wcaExportUrlFirstPart% SQL Export%wcaExportUrlSecondPart%)'
   country: Country
+  code: Country code
   event: Event
   type: Type
   show: Show
@@ -67,5 +74,35 @@ rankings:
     magic: Magic
     mmagic: Master Magic
     333mbo: 3x3x3 Multi-Blind Old Style
+rankings_explanations:
+  intro: On this page you can find rankings for countries which aren't recognised by the WCA.
+  what_is_a_country_title: What is a country?
+  what_is_a_country_text: A country is no more than a geographic area (sometimes it's an independent state but not always.
+  how: How can I be added to some rankings?
+  way_to_join: "You can ask for it on this link:"
+  here: here
 translation:
   title: Translation
+join:
+  title: Joining rankings
+  criteria: Criteria
+  criteria_sentence: "You can request to be added in a ranking if you meet at least one of the following criteria:"
+  criteria_birthplace: Be from the country (born or raised there)
+  criteria_family: Have a parent or grandparent who is from or grew up in this country
+  criteria_home: Have lived in this country for at least 3 years
+  ask: Ask
+  current_rankings: "You're currently in the following rankings:"
+  already_here: "%country%: you're already on this country's rankings"
+  added: "You've been added to this country's rankings: %country%"
+admin:
+  index:
+    title: Administrations links
+    manage_countries: Manage countries
+  addpeople:
+    title: Add someone to the rankings
+  addcountry:
+    title: Add a country
+  addadmin:
+    title: Add an admin
+    already_admin: '%user% is already an admin'
+    promoted: '%user% has been promoted to admin'

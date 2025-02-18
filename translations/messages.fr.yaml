@@ -1,12 +1,27 @@
+current_language: Français
 base:
   search: Rechercher
+  profile: Profil
+  signin: Se connecter via la WCA
+  signout: Se déconnecter
+crud:
+  back_to_list: Retour à la liste
+  show: Voir
+  edit: Modifier
+  delete: Supprimer
+  submit: Valider
+  actions: Actions
+  create_new: Créer
+  no_records_found: Aucun élément trouvé
 home:
   title: Accueil
   welcome: Bienvenue
-language: Langue
+language: "Langue :"
 rankings:
   title: Classements
+  data_from: 'Note: À part les pays, toutes les données viennent de la %wcaLink% (grâce à leur %wcaExportUrlFirstPart% export SQL%wcaExportUrlSecondPart%)'
   country: Pays
+  code: Code du pays
   event: Épreuve
   type: Type
   show: Voir
@@ -64,7 +79,47 @@ rankings:
     444bf: Cube 4x4x4 à l'aveugle
     555bf: Cube 5x5x5 à l'aveugle
     333mbf: 3x3x3 résolution multiple à l'aveugle
+    333mbo: 3x3x3 résolution multiple à l'aveugle (à l'ancienne)
     magic: Magic
     mmagic: Master Magic
+rankings_explanations:
+  intro: Vous pouvez trouver sur cette page les classements pour des pays non-reconnus par la WCA.
+  what_is_a_country_title: C'est quoi un pays ?
+  what_is_a_country_text: Un pays n'est ni plus ni moins qu'une région géographique (parfois un pays est un état indépendant mais pas toujours).
+  how: Comment puis-je être ajouté·e à un classement ?
+  way_to_join: "Vous pouvez en faire la demande sur le lien suivant :"
+  here: ici
 translation:
   title: Traduction
+join:
+  title: Rejoindre un classement
+  criteria: Conditions
+  criteria_sentence: "Vous pouvez faire la demande d'ajout à un classement si vous êtes dans un des cas suivants :"
+  criteria_birthplace: Être originaire du pays (y être né ou y avoir grandi)
+  criteria_family: Avoir un parent ou un grand-parent qui est originaire ou a grandit dans ce pays
+  criteria_home: Habiter dans ce pays depuis au moins 3 ans
+  ask: Demander
+  current_rankings: "Vous êtes actuellement dans les classements suivants :"
+  already_here: "%country% : vous êtes déjà dans les classements de ce pays"
+  added: "Vous avez été ajouté·e dans les classements du pays suivant : %country%"
+admin:
+  index:
+    title: Liens d'administration
+    manage_countries: Gérer les pays
+  addpeople:
+    title: Ajouter quelqu'un dans les classements
+  addadmin:
+    title: Ajouter un admin
+    already_admin: '%user% est déjà admin'
+    promoted: '%user% a été promu admin'
+country:
+  common:
+    name: Nom
+    short: Code
+    img: Image
+  index:
+    title: Liste des pays
+  show:
+    title: "Nom:"
+  new:
+    title: Créer un nouveau pays

@@ -1,0 +1,42 @@
+{% extends "admin/admin.html.twig" %}
+
+{% block title %}{{ 'country.index.title' | trans }} — {{ parent() }}{% endblock %}
+
+{% block body %}
+    <div class="m-auto">
+        <h1>{{ 'country.index.title' | trans }}</h1>
+
+        <a class="btn btn-light" href="{{ path('app_nation_new') }}">{{ 'crud.create_new' | trans }}</a>
+
+        <table class="table table-dark table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>{{ 'country.common.name' | trans }}</th>
+                    <th>{{ 'country.common.short' | trans }}</th>
+                    <th>{{ 'country.common.img' | trans }}</th>
+                    <th>{{ 'crud.actions' | trans }}</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for nation in nations %}
+                <tr>
+                    <td>{{ nation.id }}</td>
+                    <td>{{ ('rankings.country_names.' ~ nation.short) | trans }} ({{ nation.name }})</td>
+                    <td>{{ nation.short }}</td>
+                    <td><img class="medium-flag" src="{{ asset('flags/' ~ nation.img) }}" alt=""></td>
+                    <td>
+                        <a class="btn btn-outline-light" href="{{ path('app_nation_show', {'id': nation.id}) }}">{{ 'crud.show' | trans }}</a>
+                        <a class="btn btn-outline-light" href="{{ path('app_nation_edit', {'id': nation.id}) }}">{{ 'crud.edit' | trans }}</a>
+                        {{ include('nation/_delete_form.html.twig') }}
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="5">{{ 'crud.no_records_found' | trans }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

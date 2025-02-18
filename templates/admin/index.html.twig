@@ -1,0 +1,18 @@
+{% extends "admin/admin.html.twig" %}
+{% block title %}
+    {{ 'admin.addpeople.title'|trans }}
+{% endblock %}
+
+{% block body %}
+    <div id="content">
+        <h3>{{ 'admin.index.title'|trans }}</h3>
+        <div>
+            <ul>
+                <li><a class="link-light" href="{{ path('admin_addpeople') }}">{{ 'admin.addpeople.title' |trans }}</a></li>
+                <li><a class="link-light" href="{{ path('app_nation_index') }}">{{ 'admin.index.manage_countries' |trans }}</a></li>
+                <li><a class="link-light" href="{{ path('admin_addadmin') }}">{{ 'admin.addadmin.title' |trans }}</a></li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}

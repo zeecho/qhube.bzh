@@ -1,12 +1,27 @@
+current_language: Galo
 base:
   search: Rechercher
+  profile: Filomie
+  signin: S'abouter o la WCA
+  signout: Coûper
+crud:
+  back_to_list: Ertour a la list
+  show: Vaer
+  edit: Chanjer
+  delete: Enlever
+  submit: Valider
+  actions: Actions
+  create_new: Créer
+  no_records_found: Ren de terouë
 home:
   title: La bone arive
   welcome: La bone arive
-language: Parlement
+language: "Parlement :"
 rankings:
   title: Pllacements
+  data_from: "Mencion : Pâssë les payiz, les donées-la s'orinent de la %wcaLink% o lou %wcaExportUrlFirstPart% SQL export %wcaExportUrlSecondPart%"
   country: Payiz
+  code: Code du payiz
   event: Assaot
   type: Tipe
   show: Vaer
@@ -63,7 +78,51 @@ rankings:
     sq1: Square-1
     444bf: Qhube 4x4x4 bôgné
     555bf: Qhube 5x5x5 bôgné
+    333mbf: 3x3x3 le pus de qhubes possibl bôgné
+    333mbo: 3x3x3 le pus de qhubes possibl bôgné (ancien)
     magic: Magic
     mmagic: Master Magic
+rankings_explanations:
+  intro: Vous pouéz terouer su la paije-la les pllacements pour des payiz qi ne sont pouint erqenûs o la WCA.
+  what_is_a_country_title: Qhi qe c'ét don un payiz?
+  what_is_a_country_text: Un payiz ét ni pus ni meins q'ene rejion jéyografiqe (qheuqes fais un payiz ét un etat déheûdë meins pouint terjous).
+  how: Coment qe je peûs fére pour étr den un pllacement?
+  way_to_join: "Vous pouéz le demander su le lien-la :"
+  here: ilë
 translation:
   title: Terlaterie
+join:
+  title: Étr ajoutë·ée den les pllacements
+  criteria: Condicions
+  criteria_sentence: "Vous pouéz fére la demande pour étr ajoutë·ée den un pllacement si qe vous étes den un des câs a sieudr :"
+  criteria_birthplace: S'oriner (étr në·ée ou avair grandi) den le payiz-la
+  criteria_family: Avair un parent ou un grand-parent qi s'orine ou a grandi den le payiz-la
+  criteria_home: Rester den le payiz-la durant au meins 3 années de temp
+  ask: Demander
+  current_rankings: "Mézë v'étes den les pllacements-la :"
+  already_here: "%country% : V'étes deja den les pllacements du pays-la"
+  too_many_countries: "V'étes dija den ben de trop de payiz (%person_nb_of_countries%). %max_nb_of_countries% ét le nombre maximum possibl."
+  added: "V'avéz été ajoutë·ée den les pllacements du pays a sieudr : %country%"
+admin:
+  index:
+    title: Liens d'administracion
+    manage_countries: Mener les payiz
+  addpeople:
+    title: Ajouter qheuq'un den les pllacements
+  addcountry:
+    title: Ajouter un payiz
+  addadmin:
+    title: Ajouter un admin
+    already_admin: '%user% ét deja admin'
+    promoted: '%user% ét un admin mézë'
+country:
+  common:
+    name: Nom
+    short: Code
+    img: Imaïje
+  index:
+    title: Liste des payiz
+  show:
+    title: "Nom:"
+  new:
+    title: Créer un nouviao payiz

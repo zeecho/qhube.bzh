@@ -4,34 +4,30 @@
 {% endblock %}
 
 {% block body %}
-    <style>
-        .small-flag {
-            width: 20px;
-        }
-        .medium-flag {
-            width: 40px;
-        }
-        #rankings-form {
-            margin: 20px;
-        }
-    </style>
-
     <div id="content">
+        <p>
+            {{ 'rankings.data_from' | trans({
+                    '%wcaLink%': '<a class="link-info" href="https://www.worldcubeassociation.org/">WCA</a>',
+                    '%wcaExportUrlFirstPart%': '<a class="link-info" href="https://www.worldcubeassociation.org/export/results">',
+                    '%wcaExportUrlSecondPart%': '</a>',
+                    '%export_sql%': 'ezporzh SQL',
+            }) | raw }}
+        </p>
         <div id="rankings-form">
             {{ form_start(form) }}
             <div class="row">
-                <div class="col">
+                <div class="col text-center">
                     {{ form_row(form.country) }}
                 </div>
-                <div class="col">
+                <div class="col text-center">
                     {{ form_row(form.event) }}
                 </div>
-                <div class="col">
+                <div class="col text-center">
                     {{ form_row(form.type) }}
                 </div>
-                <div class="col">
-                    {{ form_row(form.submit, { 'label': 'rankings.show' | trans }) }}
-                </div>
+            </div>
+            <div class="row text-center button-under-form">
+                {{ form_row(form.submit, { 'label': 'rankings.show' | trans }) }}
             </div>
             {{ form_end(form) }}
         </div>
@@ -62,7 +58,7 @@
                         <td><img class="small-flag" src="{{ asset(flagUrl) }}" alt=""> {{ country.name }}</td>
                         <td><a href="https://www.worldcubeassociation.org/competitions/{{ data.competitionId }}" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">{{ data.competitionId }}</a></td>
                         {% if type == 'average' %}
-                            <td>{{ data.value1 }} {{ data.value2 }} {{ data.value3 }} {{ data.value4 }} {{ data.value5 }}</td>
+                            <td>{{ data.value1 }} {{ data.value2 }} {{ data.value3 }} {{ data.value4 == '-' ? '' : data.value4 }} {{ data.value5 == '-' ? '' : data.value5 }} </td>
                         {% endif %}
                     </tr>
                 {% endfor %}

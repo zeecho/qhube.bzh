@@ -1,12 +1,19 @@
+current_language: Esperanto
 base:
   search: Serĉi
+  profile: Profilo
+  signin: Ensaluti kun la WCA
+  signout: Elsaluti
 home:
   title: Hejmo
   welcome: Bonvenon
-language: Lingvo
+language: "Lingvo:"
+submit: Konfirmi
 rankings:
   title: Rangoj
+  data_from: 'Noto: Krom la landoj, ĉiuj datumoj venas de la %wcaLink% (uzante ilian %wcaExportUrlFirstPart% SQL-Eksportdosieron%wcaExportUrlSecondPart%)'
   country: Lando
+  code: Landokodo
   event: Konkursero
   type: Tipo
   show: Vidi
@@ -64,8 +71,38 @@ rankings:
     444bf: Kubo 4x4x4 blinde
     555bf: Kubo 5x5x5 blinde
     333mbf: 3x3x3 pluraj kuboj blinde
+    333mbo: '3x3x3: pluraj kuboj blinde (malnova stilo)'
     magic: Maĝiko
     mmagic: Mastra Maĝiko
-    333mbo: '3x3x3: pluraj kuboj blinde (malnova stilo)'
+rankings_explanations:
+  intro: Vi povas trovi sur ĉi tiu paĝo la rangojn por landoj ne agnoskitaj de la WCA.
+  what_is_a_country_title: Kio estas lando?
+  what_is_a_country_text: Lando estas nek pli nek malpli ol geografia regiono (foje lando estas sendependa ŝtato sed ne ĉiam).
+  how: Kiel mi povas esti aldonita al rangoj?
+  way_to_join: "Vi povas peti ĝin ĉe la sekva ligilo:"
+  here: tie
 translation:
   title: Tradukado
+join:
+  title: Aliĝi al rangoj
+  criteria: Kondiĉoj
+  criteria_sentence: "Vi povas peti esti aldonita al rangoj se vi estas en unu el la sekvaj kazoj:"
+  criteria_birthplace: Deveni de la lando (esti naskita aŭ kreskigita tie)
+  criteria_family: Havi gepatron aŭ geavon, kiu devenes de aŭ kreskis en ĉi tiu lando
+  criteria_home: Vivi en ĉi tiu lando dum almenaŭ 3 jaroj
+  ask: Peti
+  current_rankings: "Vi estas nuntempe en la sekvaj rangoj:"
+  already_here: "%country%: vi jam estas en la rangoj de ĉi tiu lando"
+  added: "Vi estis aldonita al la rangoj de la sekva lando: %country%"
+admin:
+  index:
+    title: Administrantaj ligiloj
+    manage_countries: Administri landojn
+  addpeople:
+    title: Aldoni iun al la rangoj
+  addcountry:
+    title: Aldoni landon
+  addadmin:
+    title: Aldoni administranton
+    already_admin: '%user% jam estas administranto'
+    promoted: '%user% estis promociita al administranto'

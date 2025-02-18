@@ -1,9 +1,13 @@
 framework:
-    default_locale: en
+    default_locale: eo
     translator:
         default_path: '%kernel.project_dir%/translations'
-        fallbacks:
-            - en
+        fallbacks: ['fr', 'en']
+#            fr: ['en']
+#            eo: ['en']
+#            br: ['fr', 'en']
+#            galo: ['fr', 'en']
+
 #        providers:
 #            crowdin:
 #                dsn: '%env(CROWDIN_DSN)%'

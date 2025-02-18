@@ -1,0 +1,56 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    {{ 'join.title'|trans }}
+{% endblock %}
+
+{% block body %}
+    <br>
+
+    <h3>{{ 'join.title' | trans }}</h3>
+    <h5>{{ 'join.criteria' | trans }}</h5>
+    <p>{{ 'join.criteria_sentence' | trans }}</p>
+    <ul>
+        <li>{{ 'join.criteria_birthplace' | trans }}</li>
+        <li>{{ 'join.criteria_family' | trans }}</li>
+        <li>{{ 'join.criteria_home' | trans }}</li>
+    </ul>
+
+    <div id="content">
+        <div id="rankings-form" class="row">
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col">
+                    {{ form_row(form.country) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.submit, { 'label': 'join.ask' | trans }) }}
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col">
+                <p>{{ 'join.current_rankings' | trans }}</p>
+                <ul>
+                    {% for peopleIdCountry, countryShort in peopleIdCountries %}
+                        <li>
+                            <div class="container">
+                                <div class="p-1 d-flex row">
+                                    <a class="col-2 h5 link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="{{ path('rankings', {'country':countryShort,'event':'333','type':'single'}) }}">{{ peopleIdCountry }}</a>
+                                    <form class="col-1" method="post" action="{{ path('unjoin_rankings', {'countryShort': countryShort}) }}" onsubmit="return confirm('Are you sure you want to be removed from this ranking?');">
+                                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ countryShort) }}">
+                                        {{ include('elements/delete_button_small.html.twig') }}
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

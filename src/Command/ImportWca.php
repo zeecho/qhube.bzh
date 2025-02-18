@@ -32,7 +32,8 @@ class ImportWca extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $this->importWCAExport($output);
+        // this doesn't work
+//        $this->importWCAExport($output);
 
         $this->createSpecificResultsTable();
 

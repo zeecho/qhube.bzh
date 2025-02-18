@@ -1,12 +1,27 @@
+current_language: Brezhoneg
 base:
   search: Klask
+  profile: Profil
+  signin: Kevreañ gant an WCA
+  signout: Digevreañ
+crud:
+  back_to_list: Distreiñ d'ar roll
+  show: Diskouez
+  edit: Embann
+  delete: Dilemel
+  submit: Gwiriekaat
+  actions: Gweredoù
+  create_new: Krouiñ unan nevez
+  no_records_found: Elfenn ebet kavet
 home:
   title: Degemer
   welcome: Degemer mat
-language: Yezh
+language: "Yezh:"
 rankings:
   title: Renkadurioù
+  data_from: "Notenn: an holl roadennoù a zeuout eus an %wcaLink% (nemet ar broioù), a-drugarez d'o %wcaExportUrlFirstPart% ezporzh SQL %wcaExportUrlSecondPart%"
   country: Bro
+  code: Kod ar vro
   event: Kenstrivadenn
   type: Seurt
   show: Gwelet
@@ -67,5 +82,47 @@ rankings:
     magic: Magic
     mmagic: Master Magic
     333mbo: 3x3x3 meur a hini dall (mod kozh)
+rankings_explanations:
+  intro: War ar bajenn-mañ e c'hallit kavout renkadurioù evit broioù n'int ket anavezet gant ar WCA.
+  what_is_a_country_title: Petra eo ur vro?
+  what_is_a_country_text: Un vro a zo hepken un tolead jeografik (a-wechoù ur stad dizalc'h met pas bepred).
+  how: Penaos bezañ ouzhpennet en ur renkadur?
+  way_to_join: "Posubl eo goulenn war al liamm-mañ :"
+  here: amañ
 translation:
   title: Troidigezh
+join:
+  title: Bezañ ouzhpennet en ur renkadur
+  criteria: Divizoù
+  criteria_sentence: "Gallout a rit goulenn bezañ ouzhpennet d'ur renkadur ma'z eo gwir unan eus an divizoù-mañ :"
+  criteria_birthplace: Bezañ eus ar vro (ganet pe savet amañ)
+  criteria_family: Kaout tud (tad pe mamm) pe tud-kozh hag a zo eus ar vro
+  criteria_home: Chom er vro e-pad 3 bloaz d'an nebeutañ
+  ask: Goulenn
+  current_rankings: "Er renkadurioù-se emaoc'h bremañ:"
+  already_here: "Emaoc'h er renkadurioù %country% c'hoazh"
+  too_many_countries: "Emaoc'h er re a vroioù c'hoazh (%person_nb_of_countries%). %max_nb_of_countries% eo an niver brasañ posupl."
+  added: "Ouzhpennet oc'h bet er renkadurioù %country%"
+admin:
+  index:
+    title: Ereoù ardoadur
+    manage_countries: Ardeiñ ar broioù
+  addpeople:
+    title: Ouzhpennañ unan bennak er renkadurioù
+  addcountry:
+    title: Ouzhpennañ ur vro
+  addadmin:
+    title: Ouzhpennañ un ardoer
+    already_admin: "%user% a zo un ardoer c'hoazh"
+    promoted: '%user% a zo bet uhelaet evel ardoer'
+country:
+  common:
+    name: Anv
+    short: Code
+    img: Skeudenn
+  index:
+    title: Roll ar broioù
+  show:
+    title: "Bro:"
+  new:
+    title: Krouiñ ur bro nevez

@@ -1,0 +1,26 @@
+{% extends "admin/admin.html.twig" %}
+{% block title %}
+    {{ 'admin.addpeople.title'|trans }}
+{% endblock %}
+
+{% block body %}
+    <div id="content">
+        <h3>{{ 'admin.addpeople.title'|trans }}</h3>
+        <div>
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col-3">
+                    {{ form_row(form.wcaId) }}
+                </div>
+                <div class="col-3">
+                    {{ form_row(form.country) }}
+                </div>
+                <div class="col-3">
+                    {{ form_row(form.submit, { 'label': 'crud.submit' | trans }) }}
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+{% endblock %}

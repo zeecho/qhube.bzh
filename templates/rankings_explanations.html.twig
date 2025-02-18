@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    {{ 'rankings.title'|trans }}
+{% endblock %}
+
+{% block body %}
+    <div id="content">
+        <div id="rankings-form">
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col text-center">
+                    {{ form_row(form.country) }}
+                </div>
+                <div class="col text-center">
+                    {{ form_row(form.event) }}
+                </div>
+                <div class="col text-center">
+                    {{ form_row(form.type) }}
+                </div>
+            </div>
+            <div class="row text-center button-under-form">
+                {{ form_row(form.submit, { 'label': 'rankings.show' | trans }) }}
+            </div>
+            {{ form_end(form) }}
+        </div>
+        <div>
+            <p>{{ 'rankings_explanations.intro' |trans }}</p>
+            <h5>{{ 'rankings_explanations.what_is_a_country_title' |trans }}</h5>
+            <p>{{ 'rankings_explanations.what_is_a_country_text' |trans }}</p>
+            <h5>{{ 'rankings_explanations.how' |trans }}</h5>
+            <p>{{ 'rankings_explanations.way_to_join' |trans }} <a href="{{ path('join_rankings') }}">{{ 'rankings_explanations.here' | trans }}</a></p>
+        </div>
+    </div>
+
+{% endblock %}

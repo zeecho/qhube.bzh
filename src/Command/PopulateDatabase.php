@@ -58,7 +58,7 @@ class PopulateDatabase extends Command
 
             foreach (explode(",", $countries) as $country) {
                 $peopleId = new PeopleId();
-                $peopleId->setCountryShort($country);
+                $peopleId->setCountryCode($country);
                 $peopleId->setWcaId($wcaId);
                 $this->entityManager->persist($peopleId);
             }
@@ -94,7 +94,7 @@ class PopulateDatabase extends Command
     private function createPerson($wcaId, $country)
     {
         $peopleId = new PeopleId();
-        $peopleId->setCountryShort($country);
+        $peopleId->setCountryCode($country);
         $peopleId->setWcaId($wcaId);
 
         $this->entityManager->persist($peopleId);
