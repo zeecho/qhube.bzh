@@ -75,10 +75,14 @@ class LoginController extends AbstractController
 
         if (is_null($user)) {
             $user = new User();
-            $user->setWcaId($wcaId);
+            if ($wcaId) {
+                $user->setWcaId($wcaId);
+            }
             $user->setName($personalData['name']);
             $user->setCountryIso2($personalData['country_iso2']);
-            $user->setRegion($personalData['region']);
+            if (array_key_exists('region', $personalData)) {
+                $user->setRegion($personalData['region']);
+            }
             $user->setDelegateStatus($personalData['delegate_status']);
 
             $entityManager->persist($user);
