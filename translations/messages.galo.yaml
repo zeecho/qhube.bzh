@@ -4,6 +4,8 @@ base:
   profile: Filomie
   signin: S'abouter o la WCA
   signout: Coûper
+  signin_successful: Ben aboutë·ée come %user%
+  signout_successful: Ben coûpë·ée!
 crud:
   back_to_list: Ertour a la list
   show: Vaer

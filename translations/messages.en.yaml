@@ -4,6 +4,8 @@ base:
   profile: Profile
   signin: Login with the WCA
   signout: Logout
+  signin_successful: Logged in successfully as %user%
+  signout_successful: Logged out successfully!
 home:
   title: Home
   welcome: Welcome

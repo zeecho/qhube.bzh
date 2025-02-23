@@ -4,6 +4,8 @@ base:
   profile: Profil
   signin: Se connecter via la WCA
   signout: Se déconnecter
+  signin_successful: Connecté·e avec succès en tant que %user%
+  signout_successful: Déconnecté·e avec succès !
 crud:
   back_to_list: Retour à la liste
   show: Voir

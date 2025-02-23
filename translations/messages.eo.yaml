@@ -4,6 +4,8 @@ base:
   profile: Profilo
   signin: Ensaluti kun la WCA
   signout: Elsaluti
+  signin_successful: Sukcese ensalutita kiel %user%
+  signout_successful: Sukcese elsalutita!
 home:
   title: Hejmo
   welcome: Bonvenon

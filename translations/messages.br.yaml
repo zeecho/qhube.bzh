@@ -2,8 +2,10 @@ current_language: Brezhoneg
 base:
   search: Klask
   profile: Profil
-  signin: Kevreañ gant an WCA
-  signout: Digevreañ
+  signin: Kennaskañ gant an WCA
+  signout: En em zigennaskañ
+  signin_successful: Kennasket gant berzh evel %user%
+  signout_successful: Digennasket gant berzh!
 crud:
   back_to_list: Distreiñ d'ar roll
   show: Diskouez
