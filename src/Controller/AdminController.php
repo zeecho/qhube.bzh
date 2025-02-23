@@ -2,21 +2,17 @@
 
 namespace App\Controller;
 
-use App\Entity\Nation;
 use App\Entity\PeopleId;
-use App\Repository\NationRepository;
+use App\Form\AddAdminType;
+use App\Form\AddPeopleIdType;
 use App\Repository\PeopleIdRepository;
 use App\Repository\UserRepository;
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Contracts\Translation\TranslatorInterface;
-use Symfony\Component\Validator\Constraints as Assert;
 
 #[Route('/{_locale}/admin')]
 #[IsGranted('ROLE_ADMIN')]
@@ -33,12 +29,12 @@ class AdminController extends AbstractController
 
 
     #[Route(
-        path: '/add-people',
+        path: '/add-to-rankings',
         name: 'admin_addpeople',
     )]
-    public function addPeopleIdAsAdmin(Request $request, EntityManagerInterface $entityManager, PeopleIdRepository $peopleIdRepository)
+    public function addPeopleToRankings(Request $request, PeopleIdRepository $peopleIdRepository, FormFactoryInterface $formFactory)
     {
-        $form = $this->createAddPeopleIdForm($entityManager);
+        $form = $formFactory->create(AddPeopleIdType::class);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
@@ -56,55 +52,13 @@ class AdminController extends AbstractController
         ]);
     }
 
-
-    public function createAddPeopleIdForm($entityManager)
-    {
-        $form = $this->createFormBuilder()
-            ->add('wcaId', TextType::class, [
-                'label' => 'WCA ID',
-                'attr' => [
-                    'class' => 'form-control'
-                ],
-                'label_attr' => [
-                    'class' => 'input-group-text'
-                ],
-                'row_attr' => [
-                    'class' => 'input-group',
-                ],
-                'constraints' => [
-                    new Assert\NotBlank(),
-                    new Assert\Regex([
-                        'pattern' => '/^\d{4}[A-Z]{4}\d{2}$/',
-                        'message' => 'The WCA ID must follow the format YYYYXXXX00 (e.g., 2007MOMO01).'
-                    ])
-                ],
-            ])
-            ->add('country', ChoiceType::class, [
-                'choices' => $entityManager->getRepository(Nation::class)->findAllOrderedByTranslations(),
-//                'choice_value' => 'short',
-                'choice_label' => function ($c) {
-                    return 'rankings.country_names.' . $c;
-                },
-                'attr' => ['class' => 'form-select'],
-                'label_attr' => ['class' => 'form-label'],
-                'label' => false,
-                'placeholder' => 'rankings.country',
-            ])
-            ->add('submit', SubmitType::class, [
-                'attr' => ['class' => 'btn btn-light']
-            ])
-            ->getForm();
-
-        return $form;
-    }
-
     #[Route(
         path: '/add-admin',
         name: 'admin_addadmin',
     )]
-    public function addAdmin(Request $request, EntityManagerInterface $entityManager, UserRepository $userRepository, TranslatorInterface $translator)
+    public function addAdmin(Request $request, UserRepository $userRepository, TranslatorInterface $translator, FormFactoryInterface $formFactory)
     {
-        $form = $this->createAddAdminForm($entityManager);
+        $form = $formFactory->create(AddAdminType::class);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
@@ -129,29 +83,5 @@ class AdminController extends AbstractController
         return $this->render('admin/addadmin.html.twig', [
             'form' => $form
         ]);
-    }
-
-
-    public function createAddAdminForm()
-    {
-        $form = $this->createFormBuilder()
-            ->add('wcaId', TextType::class, [
-                'label' => 'WCA ID',
-                'attr' => [
-                    'class' => 'form-control'
-                ],
-                'label_attr' => [
-                    'class' => 'input-group-text'
-                ],
-                'row_attr' => [
-                    'class' => 'input-group',
-                ],
-            ])
-            ->add('submit', SubmitType::class, [
-                'attr' => ['class' => 'btn btn-light']
-            ])
-            ->getForm();
-
-        return $form;
     }
 }

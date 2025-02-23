@@ -7,11 +7,9 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Validator\Constraints as Assert;
 
-class AddPeopleIdType extends AbstractType
+class JoinRankingsType extends AbstractType
 {
     private EntityManagerInterface $entityManager;
 
@@ -23,25 +21,6 @@ class AddPeopleIdType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('wcaId', TextType::class, [
-                'label' => 'WCA ID',
-                'attr' => [
-                    'class' => 'form-control'
-                ],
-                'label_attr' => [
-                    'class' => 'input-group-text'
-                ],
-                'row_attr' => [
-                    'class' => 'input-group',
-                ],
-                'constraints' => [
-                    new Assert\NotBlank(),
-                    new Assert\Regex([
-                        'pattern' => '/^\d{4}[A-Z]{4}\d{2}$/',
-                        'message' => 'The WCA ID must follow the format YYYYXXXX00 (e.g., 2007MOMO01).'
-                    ])
-                ],
-            ])
             ->add('country', ChoiceType::class, [
                 'choices' => $this->entityManager->getRepository(Nation::class)->findAllOrderedByTranslations(),
 //                'choice_value' => 'short',

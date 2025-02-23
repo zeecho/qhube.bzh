@@ -4,14 +4,15 @@ namespace App\Controller;
 
 use App\Entity\Nation;
 use App\Entity\PeopleId;
+use App\Form\JoinRankingsType;
+use App\Form\RankingsType;
 use App\Repository\EventRepository;
 use App\Repository\NationRepository;
 use App\Repository\PeopleIdRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Bundle\SecurityBundle\Security;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -26,10 +27,14 @@ class RankingsController extends AbstractController
         name: 'rankings',
 //        defaults: ['country' => 'bzh', 'event' => '333', 'type' => 'average']
     )]
-    public function rankings(Request $request, EntityManagerInterface $entityManager, EventRepository $eventRepository, NationRepository $nationRepository, string $country = null, string $event = null, string $type = null): Response
+    public function rankings(Request $request, EntityManagerInterface $entityManager, EventRepository $eventRepository, NationRepository $nationRepository, FormFactoryInterface $formFactory, string $country = null, string $event = null, string $type = null): Response
     {
-        $events =  $eventRepository->findAll();
-        $form = $this->createRankingsForm($entityManager, $events, $country, $event, $type);
+        $form = $formFactory->create(RankingsType::class, null, [
+            'country' => $country,
+            'event' => $event,
+            'type' => $type
+        ]);
+
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $formData = $form->getData();
@@ -48,7 +53,12 @@ class RankingsController extends AbstractController
             if ($type == null) {
                 $type = 'single';
             }
-            return $this->redirectToRoute('rankings', ['country' => $country, 'event' => $event, 'type' => $type]);
+
+            return $this->redirectToRoute('rankings', [
+                'country' => $country,
+                'event' => $event,
+                'type' => $type
+            ]);
         }
 
         $nation = $entityManager->getRepository(Nation::class)->findOneBy(['short' => $country]);
@@ -60,81 +70,8 @@ class RankingsController extends AbstractController
             'rankingsEvent' => $eventRepository->find($event),
             'type' => $type,
             'rankings' => $rankings,
-            'events' => $events,
-            'countriesList' => $entityManager->getRepository(Nation::class)->findAll(),
             'form' => $form
         ]);
-    }
-
-    private function createRankingsForm(EntityManagerInterface $entityManager, $events, $country, $event, $type)
-    {
-        $eventsForForm = [];
-        foreach ($events as $e) {
-            $eventsForForm[$e->getName()] = $e->getId();
-        }
-
-        $form = $this->createFormBuilder()
-            ->add('country', ChoiceType::class, [
-                'choices' => $entityManager->getRepository(Nation::class)->findAllOrderedByTranslations(),
-                'choice_label' => function ($c, $key, $value) {
-                    return 'rankings.country_names.' . $c;
-                },
-                'attr' => ['class' => 'form-select'],
-                'label_attr' => ['class' => 'form-label'],
-                'label' => 'rankings.country',
-                'placeholder' => '-',
-                'data' => $country,
-            ])
-            ->add('event', ChoiceType::class, [
-                'choices' => $eventsForForm,
-                'attr' => ['class' => 'form-select'],
-                'label_attr' => ['class' => 'form-label'],
-                'label' => 'rankings.event',
-                'choice_label' => function ($eventLabel, $key, $value) {
-                    return 'rankings.events.' . $eventLabel;
-                },
-                'placeholder' => '-',
-                'data' => $event
-            ])
-            ->add('type', ChoiceType::class, [
-                'choices' => [
-                    'rankings.single' => 'single',
-                    'rankings.average' => 'average'
-                ],
-                'attr' => ['class' => 'form-select'],
-                'label_attr' => ['class' => 'form-label'],
-                'label' => 'rankings.type',
-                'placeholder' => '-',
-                'data' => $type
-            ])
-            ->add('submit', SubmitType::class, [
-                'attr' => ['class' => 'btn btn-light'],
-            ])
-            ->getForm();
-
-        return $form;
-    }
-
-    public function createJoinRankingsForm($entityManager)
-    {
-        $form = $this->createFormBuilder()
-            ->add('country', ChoiceType::class, [
-                'choices' => $entityManager->getRepository(Nation::class)->findAllOrderedByTranslations(),
-//                'choice_value' => 'short',
-                'choice_label' => function ($c) {
-                    return 'rankings.country_names.' . $c;
-                },
-                'attr' => ['class' => 'form-select'],
-                'label_attr' => ['class' => 'form-label'],
-                'label' => false,
-                'placeholder' => 'rankings.country',
-            ])
-            ->add('submit', SubmitType::class, [
-                'attr' => ['class' => 'btn btn-light']
-            ])
-            ->getForm();
-
-        return $form;
     }
 
     #[Route(
@@ -142,7 +79,7 @@ class RankingsController extends AbstractController
         name: 'join_rankings'
     )]
     #[IsGranted('ROLE_USER')]
-    public function askToJoinRankings(Request $request, EntityManagerInterface $entityManager, Security $security, PeopleIdRepository $peopleIdRepository, TranslatorInterface $translator)
+    public function askToJoinRankings(Request $request, EntityManagerInterface $entityManager, Security $security, PeopleIdRepository $peopleIdRepository, TranslatorInterface $translator, FormFactoryInterface $formFactory)
     {
         $user = $security->getUser();
 
@@ -153,7 +90,7 @@ class RankingsController extends AbstractController
         }
         ksort($countries);
 
-        $form = $this->createJoinRankingsForm($entityManager);
+        $form = $formFactory->create(JoinRankingsType::class);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $maxCountries = 10;

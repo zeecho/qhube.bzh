@@ -26,6 +26,18 @@ class EventRepository extends ServiceEntityRepository
         return $this->findBy(array(), array('rank' => 'ASC'));
     }
 
+    public function getEventsForForm()
+    {
+        $events = $this->findAll();
+
+        $eventsForForm = [];
+        foreach ($events as $e) {
+            $eventsForForm[$e->getName()] = $e->getId();
+        }
+
+        return $eventsForForm;
+    }
+
     //We shouldn't have to chang events
 //    public function save(Event $entity, bool $flush = false): void
 //    {
