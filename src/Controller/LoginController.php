@@ -21,9 +21,13 @@ class LoginController extends AbstractController
     )]
     public function signin(Request $request)
     {
+        $previousUrl = $request->headers->get('referer');
         $locale = $request->getLocale();
         $redirectURI = str_replace('{locale}', $locale, $_ENV['REDIRECT_URI']);
-        $wcaURL = "https://www.worldcubeassociation.org/oauth/authorize?client_id=" . $_ENV['CLIENT_ID'] .  "&redirect_uri=" . $redirectURI . "&response_type=code&scope=public";
+        $wcaURL = "https://www.worldcubeassociation.org/oauth/authorize?client_id=" . $_ENV['CLIENT_ID']
+                    . "&redirect_uri=" . $redirectURI
+                    . "&state=" . urlencode($previousUrl)
+                    . "&response_type=code&scope=public";
 
         return $this->redirect($wcaURL);
     }
@@ -38,6 +42,7 @@ class LoginController extends AbstractController
         $redirectURI = str_replace('{locale}', $locale, $_ENV['REDIRECT_URI']);
 
         $code = $request->get('code');
+        $state = $request->query->get('state');
 
         $httpClient = new Client();
         // create request to WCA API
@@ -81,6 +86,10 @@ class LoginController extends AbstractController
         }
         $security->login($user);
 
+        if ($state) {
+            return $this->redirect($state);
+        }
+
         return $this->redirectToRoute('home', ['_locale' => $translator->getLocale()]);
     }
 
@@ -88,14 +97,9 @@ class LoginController extends AbstractController
         path: '/{_locale}/signout',
         name: 'signout'
     )]
-    public function signout(Request $request, Security $security, TranslatorInterface $translator)
+    public function signout(Security $security)
     {
-        // TODO this was done in order to not lose the locale on signout but it doesn't work.
-        $locale = $translator->getLocale();
-
         $security->logout();
-
-        return $this->redirectToRoute('home', ['_locale' => $locale]);
     }
 
 }
