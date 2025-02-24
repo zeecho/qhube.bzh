@@ -3,26 +3,26 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Contracts\Translation\TranslatorInterface;
 
 class QhubeController extends AbstractController
 {
-
     #[Route('/')]
-    public function indexNoLocale(TranslatorInterface $translator): Response
+    public function indexNoLocale(Request $request): Response
     {
-        return $this->redirectToRoute('home', ['_locale' => $translator->getLocale()]);
+        // Autodetect language. If you add a language, put it here as well (the order matters if there's no match)
+        $locale = $request->getPreferredLanguage(['eo', 'en', 'fr', 'br'] );
+
+        return $this->redirectToRoute('home', ['_locale' => $locale]);
     }
 
     #[Route(
         path: '/{_locale}',
         name: 'home',
     )]
-    public function home(Request $request, Security $security): Response
+    public function home(): Response
     {
         return $this->render('home.html.twig', []);
     }
