@@ -1,16 +1,14 @@
 #!/bin/bash
 
-project_folder="/var/www/html/qhube.bzh/data/translation_sources"
-git_folder="~/git-projects"
+git_folder=$1
+project_folder=$2
 wca="worldcubeassociation.org"
 tnoodle="tnoodle"
 afs="speedcubingfrance.org"
 groupifier="groupifier"
 
-cd ${git_folder}
-
 # WCA
-cd ${wca}
+cd ${git_folder}/${wca}
 git pull
 mkdir -p ${project_folder}/wca
 cp config/locales/*.yml ${project_folder}/wca
@@ -19,22 +17,20 @@ rm ${project_folder}/wca/*.*.yml
 sed 's/^<p>/        <p>/g' -i ${project_folder}/wca/en.yml
 
 # Tnoodle
-cd ../${tnoodle}
+cd ${git_folder}/${tnoodle}
 git pull
 mkdir -p ${project_folder}/tnoodle
 cp server/src/main/resources/i18n/*.yml ${project_folder}/tnoodle
 
 # AFS
-cd ../${afs}
+cd ${git_folder}/${afs}
 git pull
 mkdir -p ${project_folder}/afs
 cp config/locales/*.yml ${project_folder}/afs
 
 # Groupifier
-cd ../${groupifier}
+cd ${git_folder}/${groupifier}
 git pull
 mkdir -p ${project_folder}/groupifier
 cd ${project_folder}
-cp config/locales/*.yml ${project_folder}/groupifier
-./generate_groupifier.sh /root/git-projects/groupifier/src/logic/translations.js
-cd -
+./generate_groupifier.sh ${git_folder}/groupifier/src/logic/translations.js
