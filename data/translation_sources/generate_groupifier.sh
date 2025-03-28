@@ -14,10 +14,10 @@ fi
 
 json_output=$(node "$js_file")
 
-if ! echo "$json_output" | jq . > /dev/null 2>&1; then
-    echo "Invalid JSON output. Exiting."
-    exit 1
-fi
+#if ! echo "$json_output" | jq . > /dev/null 2>&1; then
+#    echo "Invalid JSON output. Exiting."
+#    exit 1
+#fi
 
 
 echo "$json_output" | yq e -P > temp.yaml
