@@ -42,20 +42,4 @@ class QhubeController extends AbstractController
 //            '<html><body>Lucky number: '.$number.'</body></html>'
 //        );
 //    }
-//
-//    #[Route(
-//        path: '/{_locale}/translations',
-//        name: 'translations',
-////        requirements: [
-////            '_locale' => 'en|fr|galo',
-////        ],
-//    )]
-//    public function terlaterie(): Response
-//    {
-//        $number = random_int(0, 100);
-//
-//        return new Response(
-//            '<html><body>Lucky number: '.$number.'</body></html>'
-//        );
-//    }
 }

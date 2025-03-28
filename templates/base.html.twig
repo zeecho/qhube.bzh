@@ -46,6 +46,17 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ path('rankings') }}">{{ 'rankings.title' | trans }}</a>
                         </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn btn-light dropdown-toggle nav-link" type="button" data-bs-toggle="dropdown" data-bs-target="#dropdown-languages" aria-expanded="false">
+                                    Translations
+                                </button>
+                                <ul class="dropdown-menu" id="dropdown-translations" aria-labelledby="dropdown-translations">
+                                    <li><a href="{{ path('terlaterie_encerche_projits') }}" class="dropdown-item">Search in projects</a></li>
+                                    <li><a href="{{ path('terlaterie_encerche_wca_keys') }}" class="dropdown-item">Search by wca yaml keys</a></li>
+                                </ul>
+                            </div>
+                        </li>
 {#                        <li class="nav-item">#}
 {#                            <a class="nav-link" href="{{ path('gifs') }}">Gifs</a>#}
 {#                        </li>#}
@@ -62,7 +73,7 @@
                         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                             <li class="nav-item">
                                 <div class="dropdown">
-                                    <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-target="#dropdown-profile" aria-expanded="false">
+                                    <button class="btn btn-light dropdown-toggle nav-link" type="button" data-bs-toggle="dropdown" data-bs-target="#dropdown-profile" aria-expanded="false">
                                         {{ 'base.profile' | trans }} ({{ app.user.wcaId }})
                                     </button>
                                     <ul class="dropdown-menu" id="dropdown-profile" aria-labelledby="dropdown-profile">
@@ -91,7 +102,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
-                                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-target="#dropdown-languages" aria-expanded="false">
+                                <button class="btn btn-light dropdown-toggle nav-link" type="button" data-bs-toggle="dropdown" data-bs-target="#dropdown-languages" aria-expanded="false">
                                     {{ 'language' | trans }} {{ 'current_language' | trans }}
                                 </button>
                                 <ul class="dropdown-menu" id="dropdown-languages" aria-labelledby="dropdown-languages">

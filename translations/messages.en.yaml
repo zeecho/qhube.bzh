@@ -85,6 +85,22 @@ rankings_explanations:
   here: here
 translation:
   title: Translation
+  projects:
+    titles:
+      comp_tabs: WCA competition tabs and pages
+  search_info_name: "search:"
+  search_button: Search
+  search:
+    title: Translation search
+    has_been_found_in: "has been found in:"
+    key: Key
+    form:
+      search_string: Search string
+      search_language: Search language
+      target_language: Target language
+  wca_keys:
+    title: Translation - Search by WCA yaml keys
+    placeholder_example: "Example:"
 join:
   title: Joining rankings
   criteria: Criteria

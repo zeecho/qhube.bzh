@@ -1,0 +1,45 @@
+{% extends "base.html.twig" %}
+{% block title %}
+{#    {{ 'join.title'|trans }}#}
+    Terlaterie
+{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <div>
+        {{ form_errors(form) }}
+    </div>
+
+    <div class="row text-center">
+        <div class="col-2"></div>
+        <div class="col-6">
+            {{ form_row(form.string) }}
+        </div>
+        <div class="col-2">
+            {{ form_row(form.submit) }}
+        </div>
+        <div class="col-2"></div>
+    </div>
+    {{ form_end(form) }}
+
+{#    {{ form(form) }}#}
+
+    <div class="row">
+        <div class="col-1">{{ 'translation.search_info_name'|trans }}</div>
+        <div class="col">{{ search_string }}</div>
+    </div>
+
+    {% for key,translation in translations %}
+        <div class="row border border-secondary">
+            <p>
+                <span class="text-info h4">{{ key }}</span>
+                <span class="small align-right">({{ translation.translatedName }} [<strong>{{ translation.originalName }}</strong>])</span>
+            </p>
+            <p class="fw-bold fs-5">{{ translation.data }}</p>
+        </div>
+    {% endfor %}
+
+    <script>
+        $('#terlaterie_wca_keys_string').val('')
+    </script>
+{% endblock body %}

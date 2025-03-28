@@ -1,0 +1,126 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    {{ 'translation.search.title'|trans }}
+{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <div>
+        {{ form_errors(form) }}
+    </div>
+
+    <div class="row text-center align-items-start">
+        <div class="col-5">
+            <div class="row align-items-start">
+                <div class="col-11">
+                    {{ form_row(form.searchString) }}
+                </div>
+                <div class="col-1" style="margin-top: 36px; font-size: 20px; margin-left: -55px; color: gray; cursor: pointer">
+                    <div id="empty_search">x</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            {{ form_row(form.searchLanguage) }}
+        </div>
+        <div class="col-4">
+            {{ form_row(form.targetLanguages) }}
+        </div>
+        <div class="col-1">
+            {{ form_row(form.submit) }}
+        </div>
+    </div>
+    {{ form_end(form) }}
+
+{#    {{ form(form) }}#}
+
+    <div class="row mb-2">
+        <div class="col-1">{{ 'translation.search_info_name'|trans }}</div>
+        <div class="col fw-bold">{{ search_string }}</div>
+    </div>
+
+    <div class="row align-items-center mb-4">
+        <div class="col-2">{{ 'translation.search.has_been_found_in'|trans }}</div>
+        <div class="col-10">
+            <list>
+                <ul class="list-group list-group-horizontal">
+                    {% for projectKey, project in projects %}
+                        {% if translations[projectKey] is defined %}
+                            <li class="list-group-item text-bg-secondary"><a href="#title-{{ projectKey }}" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">{{ project.name }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </list>
+        </div>
+    </div>
+
+    {% for projectKey, project in projects %}
+        {% if translations[projectKey] is defined %}
+            <div class="container mb-4">
+                <h3 id="title-{{ projectKey }}" class="text-center fw-bold">{{ project.name }}</h3>
+                <table class="table table-dark table-striped table-hover table-bordered text-break">
+                    <thead>
+                    <tr>
+                        <th scope="col">{{ 'translation.search.key'|trans }}</th>
+                        {% for language in languages[projectKey] %}
+                            <th scope="col">{{ language }}</th>
+                        {% endfor %}
+                    </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                    {% for key,translation in translations[projectKey] %}
+                        <tr>
+                            <th scope="row">
+                                {{ key | replace({'.': ' > '}) }}
+                            </th>
+                            {% for language in languages[projectKey] %}
+                                {% if translation[language] is defined %}
+                                    {% if project.quality[language] is defined %}
+                                        {% if project.quality[language].reviewed == false %}
+                                            {% set borderColor = "orange" %}
+                                        {% elseif project.quality[language].reviewed == true %}
+                                            {% set borderColor = "green" %}
+                                        {% else %}
+                                            {% set borderColor = "" %}
+                                        {% endif %}
+                                    {% else %}
+                                        {% set borderColor = "" %}
+                                    {% endif %}
+                                    <td class="{{ borderColor }}">
+                                        {{ translation[language] | raw }}
+                                    </td>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+
+    <script>
+        var searchInput = $('#terlaterie_search_searchString');
+        var emptyButton = $('#empty_search');
+        emptyButton.click(e => {
+            e.preventDefault();
+            searchInput.val('').focus();
+        })
+
+        var tl = $('#terlaterie_search_targetLanguages')
+        tl.children().each(function () {
+            $(this).addClass('form-check').addClass('form-check-inline');
+            $(this).children('input').addClass('btn-check');
+            $(this).children('label').addClass('btn text-light');
+        })
+        tl.prev().addClass('form-title');
+
+        $(document).on('keypress',function(e) {
+            if(!searchInput.is(':focus') && (e.key === '/' || e.key === 's')) {
+                e.preventDefault();
+                searchInput.focus().select();
+            }
+        });
+    </script>
+{% endblock body %}

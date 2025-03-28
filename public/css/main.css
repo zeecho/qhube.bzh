@@ -13,3 +13,21 @@
 .button-under-form {
     margin-top: 5px;;
 }
+
+.search-match {
+    color: red;
+    font-weight: bold;
+}
+
+.no-padding-top {
+    padding-top: 0;
+}
+.form-title {
+    font-weight: bold;
+}
+.orange {
+    color: orange !important;
+}
+.green {
+    color: green !important;
+}
