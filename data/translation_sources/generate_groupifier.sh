@@ -29,7 +29,7 @@ else
   languages=$(echo "$json_output" | jq -r '.texts | keys[]')
   for lang in $languages; do
       echo "${lang}:" > "groupifier/${lang}.yml"
-      yq e ".texts.${lang}" < temp.yaml > "groupifier/${lang}.yml"
+      yq e ".texts.${lang}" < temp.yaml >> "groupifier/${lang}.yml"
       sed '1!s/^/  /' "groupifier/${lang}.yml" > "groupifier/${lang}_temp.yml"
       mv "groupifier/${lang}_temp.yml" "groupifier/${lang}.yml"
   done
