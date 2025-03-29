@@ -27,8 +27,8 @@ cd ${git_folder}/${afs}
 git pull
 mkdir -p ${project_folder}/afs
 cp config/locales/*.yml ${project_folder}/afs
-sed 's/true:/"true":/g' data/translation_sources/afs/*.yml -i
-sed 's/false:/"false":/g' data/translation_sources/afs/*.yml -i
+sed 's/true:/"true":/g' ${project_folder}/afs/*.yml -i
+sed 's/false:/"false":/g' ${project_folder}/afs/*.yml -i
 
 # Groupifier
 cd ${git_folder}/${groupifier}
