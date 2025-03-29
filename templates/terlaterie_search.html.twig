@@ -15,7 +15,8 @@
                 <div class="col-11">
                     {{ form_row(form.searchString) }}
                 </div>
-                <div class="col-1" style="margin-top: 36px; font-size: 20px; margin-left: -55px; color: gray; cursor: pointer">
+                <div class="col-1"
+                     style="margin-top: 36px; font-size: 20px; margin-left: -55px; color: gray; cursor: pointer">
                     <div id="empty_search">x</div>
                 </div>
             </div>
@@ -32,7 +33,7 @@
     </div>
     {{ form_end(form) }}
 
-{#    {{ form(form) }}#}
+    {#    {{ form(form) }} #}
 
     <div class="row mb-2">
         <div class="col-1">{{ 'translation.search_info_name'|trans }}</div>
@@ -46,7 +47,9 @@
                 <ul class="list-group list-group-horizontal">
                     {% for projectKey, project in projects %}
                         {% if translations[projectKey] is defined %}
-                            <li class="list-group-item text-bg-secondary"><a href="#title-{{ projectKey }}" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">{{ project.name }}</a></li>
+                            <li class="list-group-item text-bg-secondary"><a href="#title-{{ projectKey }}"
+                                                                             class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">{{ project.name }}</a>
+                            </li>
                         {% endif %}
                     {% endfor %}
                 </ul>
@@ -58,6 +61,21 @@
         {% if translations[projectKey] is defined %}
             <div class="container mb-4">
                 <h3 id="title-{{ projectKey }}" class="text-center fw-bold">{{ project.name }}</h3>
+                <p class="text-center small">
+                    {% if (project.source is defined and project.source != "") or (project.website is defined and project.website != "") %}
+                        (
+                        {% if project.source is defined and project.source != "" %}
+                            <a href="{{ project.source }}" class="link-info link-underline-opacity-25" target="_blank">Source</a>
+                        {% endif %}
+                        {% if (project.source is defined and project.source != "") and (project.website is defined and project.website != "") %}
+                            ;
+                        {% endif %}
+                        {% if project.website is defined and project.website != "" %}
+                            <a href="{{ project.website }}" class="link-info link-underline-opacity-25" target="_blank">Website</a>
+                        {% endif %}
+                        )
+                    {% endif %}
+                </p>
                 <table class="table table-dark table-striped table-hover table-bordered text-break">
                     <thead>
                     <tr>
@@ -116,8 +134,8 @@
         })
         tl.prev().addClass('form-title');
 
-        $(document).on('keypress',function(e) {
-            if(!searchInput.is(':focus') && (e.key === '/' || e.key === 's')) {
+        $(document).on('keypress', function (e) {
+            if (!searchInput.is(':focus') && (e.key === '/' || e.key === 's')) {
                 e.preventDefault();
                 searchInput.focus().select();
             }

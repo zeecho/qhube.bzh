@@ -18,6 +18,8 @@ class ProjectService
             'wca' => [
                 'name' => 'World Cube Association',
                 'format' => 'yml',
+                'source' => "https://github.com/thewca/worldcubeassociation.org",
+                'website' => "https://www.worldcubeassociation.org",
                 'quality' => [
                     'br' => [
                         'reviewed' => false
@@ -30,6 +32,8 @@ class ProjectService
             'afs' => [
                 'name' => 'Association Française de Speedcubing',
                 'format' => 'yml',
+                'source' => "https://github.com/speedcubingfrance/speedcubingfrance.org",
+                'website' => "http://www.speedcubingfrance.org/",
                 'quality' => [
                     'br' => [
                         'reviewed' => false
@@ -53,11 +57,15 @@ class ProjectService
             ],
             'groupifier' => [
                 'name' => 'Groupifier',
-                'format' => 'yml'
+                'format' => 'yml',
+                'source' => "https://github.com/jonatanklosko/groupifier",
+                'website' => "https://groupifier.jonatanklosko.com/",
             ],
             'tnoodle' => [
                 'name' => 'TNoodle (FMC)',
                 'format' => 'yml',
+                'source' => "https://github.com/thewca/tnoodle",
+                'website' => "https://www.worldcubeassociation.org/regulations/scrambles/",
                 'quality' => [
                     'br' => [
                         'reviewed' => true
@@ -67,6 +75,8 @@ class ProjectService
             'faq_afs' => [
                 'name' => 'FAQ AFS',
                 'format' => 'yml',
+                'source' => "",
+                'website' => "",
                 'quality' => [
                     'br' => [
                         'reviewed' => false
