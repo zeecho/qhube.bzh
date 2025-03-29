@@ -27,6 +27,7 @@ cd ${git_folder}/${afs}
 git pull
 mkdir -p ${project_folder}/afs
 cp config/locales/*.yml ${project_folder}/afs
+rm ${project_folder}/afs/simple_form.en.yml
 sed 's/true:/"true":/g' ${project_folder}/afs/*.yml -i
 sed 's/false:/"false":/g' ${project_folder}/afs/*.yml -i
 
