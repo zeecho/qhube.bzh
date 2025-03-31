@@ -60,6 +60,18 @@ class NationRepository extends ServiceEntityRepository
         return  $countriesChoices;
     }
 
+    public function findAllOrderedByOriginalNames(): array
+    {
+        $countries = $this->findAll();
+        $countriesChoices = [];
+        foreach ($countries as $country) {
+            $countriesChoices[$country->getName()] = $country->getShort();
+        }
+
+        ksort($countriesChoices);
+        return  $countriesChoices;
+    }
+
     public function getResults($country, $event, $type)
     {
         if ($type == 'single') {

@@ -1,0 +1,15 @@
+knp_snappy:
+    temporary_folder: "%kernel.cache_dir%/snappy"
+    pdf:
+        enabled:    true
+#        binary:     '%env(WKHTMLTOPDF_PATH)%'
+        binary:     '/usr/bin/wkhtmltopdf'
+        options:    []
+#        options:
+#            no-stop-slow-scripts: true
+#            enable-local-file-access: true
+    image:
+        enabled:    true
+#        binary:     '%env(WKHTMLTOIMAGE_PATH)%'
+        binary:     '/usr/bin/wkhtmltoimage'
+        options:    []

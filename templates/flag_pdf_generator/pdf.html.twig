@@ -1,0 +1,20 @@
+<style>
+    img {
+        margin: 2px;
+        border: 1px solid grey;
+    }
+</style>
+
+{% if flagSize != 'all' %}
+    {% for i in 1..750 %}
+        <img style="width: {{ flagSize }};" src="{{ flagPath }}" alt="">
+    {% endfor %}
+{% else %}
+    {% for size in range(12, 29, 2) %}
+        {% set flagsPerRow = (210 / size) | round(0, 'floor')  %}
+        <div>{{ size }}mm</div>
+        {% for i in 1..(flagsPerRow * 1.9) %}
+            <img style="width: {{ size }}mm;" src="{{ flagPath }}" alt="">
+        {% endfor %}
+    {% endfor %}
+{% endif %}
