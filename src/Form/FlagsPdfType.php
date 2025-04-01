@@ -40,7 +40,7 @@ class FlagsPdfType extends AbstractType
         $flagsCustom = [
             'Catalunya (Estelada blava)' => 'cat-estelada_blava',
             'Catalunya (Estelada vermella)' => 'cat-estelada_vermella',
-            'Occitània (sens l\'estela)' => 'occ-sens_l_estela.svg',
+            'Occitània (sens l\'estela)' => 'occ-sens_l_estela',
         ];
 
         $flags = $this->entityManager->getRepository(Nation::class)->findAllOrderedByOriginalNames();
