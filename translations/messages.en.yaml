@@ -137,6 +137,7 @@ menu:
 flag_generator:
   intro: "You don't like the flag on your competition badge? You can generate a pdf of your flag here, print it on a sticker paper sheet and distribute your small flag stickers to your fellow cubers who are interested as well. If you know the width of the flag on the badge, you can choose it there. If you don't, just pick the option with a bit of everything and you should be ready for most competitions."
   flag: "Flag"
-  flag_width: "Flag width"
+  flag_height: "Flag height"
+  a_bit_of_everything: "A bit of everything between 6mm and 18mm"
   format: "Format"
   submit_button: "Generate flag sheet"

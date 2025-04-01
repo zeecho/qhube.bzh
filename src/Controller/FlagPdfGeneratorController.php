@@ -26,7 +26,7 @@ class FlagPdfGeneratorController extends AbstractController
             $html = $this->renderView(
                 'flag_pdf_generator/pdf.html.twig', [
                     'flagPath' => $path,
-                    'flagSize' => $formData['flagWidth']
+                    'flagSize' => $formData['flagHeight']
                 ]
             );
 

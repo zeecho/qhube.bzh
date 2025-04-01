@@ -29,13 +29,12 @@ class FlagsPdfType extends AbstractType
         ];
 
         $flagSizes = [
-                        'A bit of everything between 12mm and 28mm' => 'all',
+            $this->translator->trans('flag_generator.a_bit_of_everything') => 'all',
         ];
-        for ($i = 12; $i <= 30; $i = $i+2) {
+
+        for ($i = 6; $i <= 30; $i = $i+2) {
             $flagSizes[$i . 'mm'] = $i . 'mm';
         }
-        $flagSizes['35mm'] = '35mm';
-        $flagSizes['40mm'] = '40mm';
 
         $flagsCustom = [
             'Catalunya (Estelada blava)' => 'cat-estelada_blava',
@@ -52,9 +51,9 @@ class FlagsPdfType extends AbstractType
                 'choices' => $flags,
                 'label' => $this->translator->trans('flag_generator.flag'),
             ])
-            ->add('flagWidth', ChoiceType::class, [
+            ->add('flagHeight', ChoiceType::class, [
                 'choices' => $flagSizes,
-                'label' => $this->translator->trans('flag_generator.flag_width'),
+                'label' => $this->translator->trans('flag_generator.flag_height'),
             ])
             ->add('format', ChoiceType::class, [
                 'choices' => $formats,
