@@ -132,6 +132,7 @@ menu:
   tools:
     title: Tools
     flag_generator_menu: Flag sheet generator
+    groupifier: Groupifier (with multi-language scorecards support)
   settings:
     dyslexia: Dyslexia
 flag_generator:
