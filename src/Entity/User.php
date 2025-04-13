@@ -32,6 +32,9 @@ class User implements UserInterface
     #[ORM\Column(length: 100, nullable: true)]
     private ?string $delegate_status = null;
 
+    #[ORM\Column]
+    private ?int $wcaWebsiteId = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -138,6 +141,18 @@ class User implements UserInterface
     public function setDelegateStatus(?string $delegate_status): self
     {
         $this->delegate_status = $delegate_status;
+
+        return $this;
+    }
+
+    public function getWcaWebsiteId(): ?int
+    {
+        return $this->wcaWebsiteId;
+    }
+
+    public function setWcaWebsiteId(int $wcaWebsiteId): self
+    {
+        $this->wcaWebsiteId = $wcaWebsiteId;
 
         return $this;
     }

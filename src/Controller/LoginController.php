@@ -25,9 +25,9 @@ class LoginController extends AbstractController
         $locale = $request->getLocale();
         $redirectURI = str_replace('{locale}', $locale, $_ENV['REDIRECT_URI']);
         $wcaURL = "https://www.worldcubeassociation.org/oauth/authorize?client_id=" . $_ENV['CLIENT_ID']
-                    . "&redirect_uri=" . $redirectURI
-                    . "&state=" . urlencode($previousUrl)
-                    . "&response_type=code&scope=public";
+            . "&redirect_uri=" . $redirectURI
+            . "&state=" . urlencode($previousUrl)
+            . "&response_type=code&scope=public";
 
         return $this->redirect($wcaURL);
     }
@@ -69,25 +69,33 @@ class LoginController extends AbstractController
         $personalData = json_decode($response->getBody()->getContents(), true);
         $personalData = $personalData['me'];
 
-        $wcaId = $personalData['wca_id'];
+        $wcaWebsiteId = $personalData['id'];
+        $user = $entityManager->getRepository(User::class)->findOneBy(['wcaWebsiteId' => $wcaWebsiteId]);
 
-        $user = $entityManager->getRepository(User::class)->findOneBy([ 'wcaId' => $wcaId ]);
+        $wcaId = $personalData['wca_id'];
+        if (is_null($user)) {
+            $user = $entityManager->getRepository(User::class)->findOneBy(['wcaId' => $wcaId]);
+        }
 
         if (is_null($user)) {
             $user = new User();
-            if ($wcaId) {
-                $user->setWcaId($wcaId);
-            }
-            $user->setName($personalData['name']);
-            $user->setCountryIso2($personalData['country_iso2']);
-            if (array_key_exists('region', $personalData)) {
-                $user->setRegion($personalData['region']);
-            }
-            $user->setDelegateStatus($personalData['delegate_status']);
-
-            $entityManager->persist($user);
-            $entityManager->flush();
         }
+
+        if ($wcaId) {
+            $user->setWcaId($wcaId);
+        }
+
+        $user->setName($personalData['name']);
+        $user->setCountryIso2($personalData['country_iso2']);
+        if (array_key_exists('region', $personalData)) {
+            $user->setRegion($personalData['region']);
+        }
+        $user->setDelegateStatus($personalData['delegate_status']);
+        $user->setWcaWebsiteId($wcaWebsiteId);
+
+        $entityManager->persist($user);
+        $entityManager->flush();
+
         $security->login($user);
 
         if ($state) {
