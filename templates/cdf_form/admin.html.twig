@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% set title = "Résultats votes coupe de france 2025" %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+    <div>
+        <h1>{{ title }}</h1>
+
+        {% for event, data in votes %}
+            <div class="border border-primary-subtle rounded-1 my-3 p-2">
+                <h4>{{ ('rankings.events.' ~ event) | trans }}</h4>
+                <table class="table table-dark table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Votes</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for cuber in data %}
+                        <tr>
+                            <td>{{ registrations[cuber.WCAID] }} ({{ cuber.WCAID }})</td>
+                            <td>{{ cuber.nb_votes }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
