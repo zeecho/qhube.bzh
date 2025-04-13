@@ -64,14 +64,13 @@ class AdminController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $formData = $form->getData();
             $user = $userRepository->findOneBy(['wcaId' => $formData['wcaId']]);
-//            $user->setRoles(['ROLE_USER']);
-//            $userRepository->save($user, true);
 
-            if (in_array('ROLE_ADMIN', $user->getRoles())) {
+            $newRole = $formData['role'];
+            if (in_array($newRole, $user->getRoles())) {
                 $message = $translator->trans('admin.addadmin.already_admin', ['%user%' => $user->getName()]);
                 $this->addFlash('danger', $message);
             } else {
-                $user->addRole('ROLE_ADMIN');
+                $user->addRole($newRole);
                 $userRepository->save($user, true);
                 $message = $translator->trans('admin.addadmin.promoted', ['%user%' => $user->getName()]);
                 $this->addFlash('success', $message);
