@@ -14,7 +14,7 @@ class User implements UserInterface
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 10, unique: true)]
+    #[ORM\Column(length: 10, unique: true, nullable: true)]
     private ?string $wcaId = null;
 
     #[ORM\Column]
