@@ -73,7 +73,8 @@ class LoginController extends AbstractController
         $user = $entityManager->getRepository(User::class)->findOneBy(['wcaWebsiteId' => $wcaWebsiteId]);
 
         $wcaId = $personalData['wca_id'];
-        if (is_null($user)) {
+
+        if (is_null($user) && !is_null($wcaId)) {
             $user = $entityManager->getRepository(User::class)->findOneBy(['wcaId' => $wcaId]);
         }
 

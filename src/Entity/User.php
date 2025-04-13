@@ -14,7 +14,7 @@ class User implements UserInterface
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 10, unique: true, nullable: true)]
+    #[ORM\Column(length: 10, nullable: true)]
     private ?string $wcaId = null;
 
     #[ORM\Column]
@@ -32,7 +32,7 @@ class User implements UserInterface
     #[ORM\Column(length: 100, nullable: true)]
     private ?string $delegate_status = null;
 
-    #[ORM\Column]
+    #[ORM\Column(unique: true)]
     private ?int $wcaWebsiteId = null;
 
     public function getId(): ?int

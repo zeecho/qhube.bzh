@@ -87,9 +87,10 @@
                             <li class="nav-item">
                                 <div class="dropdown">
                                     <button class="btn btn-light dropdown-toggle nav-link" type="button" data-bs-toggle="dropdown" data-bs-target="#dropdown-profile" aria-expanded="false">
-                                        {{ 'base.profile' | trans }} ({{ app.user.wcaId }})
+                                        {{ 'base.profile' | trans }}
                                     </button>
                                     <ul class="dropdown-menu" id="dropdown-profile" aria-labelledby="dropdown-profile">
+                                        <li class="dropdown-header">{{ app.user.name }} {{ app.user.wcaid }}</li>
                                         <li><a class="dropdown-item" href="{{ path('signout') }}">{{ 'base.signout' | trans }}</a></li>
                                         <li><a class="dropdown-item" href="{{ path('join_rankings') }}">{{ 'join.title' | trans }}</a></li>
                                         {% if is_granted('ROLE_ADMIN') %}
