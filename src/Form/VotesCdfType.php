@@ -38,6 +38,7 @@ class VotesCdfType extends AbstractType
             unset($registrationEvent['Charles Daloz-Baltenberger']);
             unset($registrationEvent['Jules Desjardin']);
             unset($registrationEvent['Anthony Lafourcade']);
+            unset($registrationEvent['Nicolas Gertner Kilian']);
 
             ksort($registrationEvent, SORT_LOCALE_STRING);
             $registrationsByEvent[$key] = $registrationEvent;
@@ -48,43 +49,43 @@ class VotesCdfType extends AbstractType
         $builder
             ->add('three', ChoiceType::class, [
                 'choices' => $registrationsByEvent['333'],
-                'label' => $this->translator->trans('rankings.events.333'),
+                'label' => $this->translator->trans('rankings.events.333') . ' (Équipe Élite : Juliette Sébastien)',
                 'placeholder' => $placeholder,
 
             ])
             ->add('two', ChoiceType::class, [
                 'choices' => $registrationsByEvent['222'],
-                'label' => $this->translator->trans('rankings.events.222'),
+                'label' => $this->translator->trans('rankings.events.222') . ' (Équipe Élite : Diego Fraile)',
                 'placeholder' => $placeholder,
             ])
             ->add('four', ChoiceType::class, [
                 'choices' => $registrationsByEvent['444'],
-                'label' => $this->translator->trans('rankings.events.444'),
+                'label' => $this->translator->trans('rankings.events.444') . ' (Équipe Élite : Alexandre Carlier)',
                 'placeholder' => $placeholder,
             ])
             ->add('five', ChoiceType::class, [
                 'choices' => $registrationsByEvent['555'],
-                'label' => $this->translator->trans('rankings.events.555'),
+                'label' => $this->translator->trans('rankings.events.555') . ' (Équipe Élite : Abdelhak Kaddour)',
                 'placeholder' => $placeholder,
             ])
             ->add('bld', ChoiceType::class, [
                 'choices' => $registrationsByEvent['333bf'],
-                'label' => $this->translator->trans('rankings.events.333bf'),
+                'label' => $this->translator->trans('rankings.events.333bf') . ' (Équipe Élite : Charles Daloz-Baltenberger)',
                 'placeholder' => $placeholder,
             ])
             ->add('oh', ChoiceType::class, [
                 'choices' => $registrationsByEvent['333oh'],
-                'label' => $this->translator->trans('rankings.events.333oh'),
+                'label' => $this->translator->trans('rankings.events.333oh') . ' (Équipe Élite : Nicolas Gertner Kilian)',
                 'placeholder' => $placeholder,
             ])
             ->add('pyra', ChoiceType::class, [
                 'choices' => $registrationsByEvent['pyram'],
-                'label' => $this->translator->trans('rankings.events.pyram'),
+                'label' => $this->translator->trans('rankings.events.pyram') . ' (Équipe Élite : Jules Desjardin)',
                 'placeholder' => $placeholder,
             ])
             ->add('skewb', ChoiceType::class, [
                 'choices' => $registrationsByEvent['skewb'],
-                'label' => $this->translator->trans('rankings.events.skewb'),
+                'label' => $this->translator->trans('rankings.events.skewb') . ' (Équipe Élite : Anthony Lafourcade)',
                 'placeholder' => $placeholder,
             ])
             ->add('submit', SubmitType::class, [

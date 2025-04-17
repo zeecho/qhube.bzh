@@ -1,24 +1,26 @@
 {% extends 'base.html.twig' %}
 
-{% set title = "Choisissez les cubeurs et cubeuses que vous souhaitez voir participer à la coupe de france 2025 !" %}
-{% block title %}{{ title }}{% endblock %}
+{% block title %}{{ 'vote_cdf.page_title'|trans }}{% endblock %}
 
 {% block body %}
     <div>
-        <h1>{{ title }}</h1>
+        <h1 class="text-center">{{ 'vote_cdf.title'|trans }}</h1>
+        <p class="text-center">
+            <img src="{{ asset('img/coupe_de_france_2025-logo.jpg') }}" alt="Logo Coupe de France 2025">
+        </p>
+        <p class="fw-bold">{{ 'vote_cdf.desc1'|trans }} {{ 'vote_cdf.desc2'|trans }}</p>
 
         {% if signed_in %}
             {% if already_voted %}
-                <p class="p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3">Vous avez voté. Mais vous pouvez toujours modifier votre vote ci-dessous:</p>
+                <p class="p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3">{{ 'vote_cdf.already_voted'|trans }}</p>
             {% else %}
-                <p class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">Vous n'avez pas encore voté. Veuillez le faire ci-dessous.</p>
+                <p class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">{{ 'vote_cdf.not_voted_yet'|trans }}</p>
             {% endif %}
-            <p class="p-3 text-secondary-emphasis bg-secondary-subtle border border-primary-subtle rounded-3">N'hésitez pas à consulter les classements théoriques (psych sheets) <a
-                        href="https://www.worldcubeassociation.org/competitions/FrenchChampionship2025/registrations" target="_blank">ici</a></p>
+            <p class="p-3 text-secondary-emphasis bg-secondary-subtle border border-primary-subtle rounded-3">{{ 'vote_cdf.check_psych_sheet'|trans|raw }}</p>
             {{ form(form) }}
         {% else %}
             <p class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
-                Vous devez vous connecter avec votre compte WCA pour pouvoir voter. Connectez-vous en cliquant <a href="{{ path('signin') }}">ici</a>.
+                {{ 'vote_cdf.you_must_signin'|trans }} <a href="{{ path('signin') }}">{{ 'vote_cdf.here'|trans }}</a>.
             </p>
         {% endif %}
     </div>
