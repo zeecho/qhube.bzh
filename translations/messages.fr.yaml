@@ -1,127 +1,173 @@
 current_language: Français
 base:
-  search: Rechercher
-  profile: Profil
-  signin: Se connecter via la WCA
-  signout: Se déconnecter
-  signin_successful: Connecté·e avec succès en tant que %user%
-  signout_successful: Déconnecté·e avec succès !
+    search: Rechercher
+    profile: Profil
+    signin: 'Se connecter via la WCA'
+    signout: 'Se déconnecter'
+    signin_successful: 'Connecté·e avec succès en tant que %user%'
+    signout_successful: 'Déconnecté·e avec succès !'
 crud:
-  back_to_list: Retour à la liste
-  show: Voir
-  edit: Modifier
-  delete: Supprimer
-  submit: Valider
-  actions: Actions
-  create_new: Créer
-  no_records_found: Aucun élément trouvé
+    back_to_list: 'Retour à la liste'
+    show: Voir
+    edit: Modifier
+    delete: Supprimer
+    submit: Valider
+    actions: Actions
+    create_new: Créer
+    no_records_found: 'Aucun élément trouvé'
 home:
-  title: Accueil
-  welcome: Bienvenue
-language: "Langue :"
+    title: Accueil
+    welcome: Bienvenue
+language: 'Langue :'
 rankings:
-  title: Classements
-  data_from: 'Note: À part les pays, toutes les données viennent de la %wcaLink% (grâce à leur %wcaExportUrlFirstPart% export SQL%wcaExportUrlSecondPart%)'
-  country: Pays
-  code: Code du pays
-  event: Épreuve
-  type: Type
-  show: Voir
-  rankings_for: "Classement de :"
-  name: Nom
-  result: Résultat
-  competition: Compétition
-  details: Détail
-  single: Meilleur temps
-  average: Moyenne
-  country_names:
-    anj: Anjou
-    arp: Arpitanie
-    ast: Asturies
-    auv: Auvergne
-    bre: Bourgogne
-    bzh: Bretagne
-    cat: Catalogne
-    cha: Champagne
-    cor: Corse
-    cym: Pays de Galles
-    dau: Dauphiné
-    els: Alsace
-    eng: Angoumois
-    euh: Pays Basque
-    for: Forez
-    frc: Franche-Comté
-    gal: Galice
-    ker: Cornouailles
-    kur: Kurdistan
-    lou: Lorraine
-    nor: Normandie
-    occ: Occitanie
-    poe: Poitou
-    pro: Provence
-    sav: Savoie
-    sco: Écosse
-    tué: Irlande du Nord
-  events:
-    '222': Cube 2x2x2
-    '333': Cube 3x3x3
-    '444': Cube 4x4x4
-    '555': Cube 5x5x5
-    '666': Cube 6x6x6
-    '777': Cube 7x7x7
-    333bf: 3x3x3 à l'aveugle
-    333fm: 3x3x3 résolution optimisée
-    333oh: 3x3x3 à une main
-    333ft: 3x3x3 avec les pieds
-    clock: Clock
-    minx: Megaminx
-    pyram: Pyraminx
-    skewb: Skewb
-    sq1: Square-1
-    444bf: Cube 4x4x4 à l'aveugle
-    555bf: Cube 5x5x5 à l'aveugle
-    333mbf: 3x3x3 résolution multiple à l'aveugle
-    333mbo: 3x3x3 résolution multiple à l'aveugle (à l'ancienne)
-    magic: Magic
-    mmagic: Master Magic
-rankings_explanations:
-  intro: Vous pouvez trouver sur cette page les classements pour des pays non-reconnus par la WCA.
-  what_is_a_country_title: C'est quoi un pays ?
-  what_is_a_country_text: Un pays n'est ni plus ni moins qu'une région géographique (parfois un pays est un état indépendant mais pas toujours).
-  how: Comment puis-je être ajouté·e à un classement ?
-  way_to_join: "Vous pouvez en faire la demande sur le lien suivant :"
-  here: ici
-translation:
-  title: Traduction
-join:
-  title: Rejoindre un classement
-  criteria: Conditions
-  criteria_sentence: "Vous pouvez faire la demande d'ajout à un classement si vous êtes dans un des cas suivants :"
-  criteria_birthplace: Être originaire du pays (y être né ou y avoir grandi)
-  criteria_family: Avoir un parent ou un grand-parent qui est originaire ou a grandit dans ce pays
-  criteria_home: Habiter dans ce pays depuis au moins 3 ans
-  ask: Demander
-  current_rankings: "Vous êtes actuellement dans les classements suivants :"
-  already_here: "%country% : vous êtes déjà dans les classements de ce pays"
-  added: "Vous avez été ajouté·e dans les classements du pays suivant : %country%"
-admin:
-  index:
-    title: Liens d'administration
-    manage_countries: Gérer les pays
-  addpeople:
-    title: Ajouter quelqu'un dans les classements
-  addadmin:
-    title: Ajouter un admin
-    already_admin: '%user% est déjà admin'
-    promoted: '%user% a été promu admin'
-country:
-  common:
+    title: Classements
+    data_from: 'Note: À part les pays, toutes les données viennent de la %wcaLink% (grâce à leur %wcaExportUrlFirstPart% export SQL%wcaExportUrlSecondPart%)'
+    country: Pays
+    code: 'Code du pays'
+    event: Épreuve
+    type: Type
+    show: Voir
+    rankings_for: "Classement de\_:"
     name: Nom
-    short: Code
-    img: Image
-  index:
-    title: Liste des pays
-  show:
-    title: "Nom:"
-  new:
-    title: Créer un nouveau pays
+    result: Résultat
+    competition: Compétition
+    details: Détail
+    single: 'Meilleur temps'
+    average: Moyenne
+    country_names:
+        anj: Anjou
+        arp: Arpitanie
+        ast: Asturies
+        auv: Auvergne
+        bre: Bourgogne
+        bzh: Bretagne
+        cat: Catalogne
+        cha: Champagne
+        cor: Corse
+        cym: 'Pays de Galles'
+        dau: Dauphiné
+        els: Alsace
+        eng: Angoumois
+        euh: 'Pays Basque'
+        for: Forez
+        frc: Franche-Comté
+        gal: Galice
+        ker: Cornouailles
+        kur: Kurdistan
+        lou: Lorraine
+        nor: Normandie
+        occ: Occitanie
+        poe: Poitou
+        pro: Provence
+        sav: Savoie
+        sco: Écosse
+        tué: 'Irlande du Nord'
+    events:
+        222: 'Cube 2x2x2'
+        333: 'Cube 3x3x3'
+        444: 'Cube 4x4x4'
+        555: 'Cube 5x5x5'
+        666: 'Cube 6x6x6'
+        777: 'Cube 7x7x7'
+        333bf: "3x3x3 à l'aveugle"
+        333fm: '3x3x3 résolution optimisée'
+        333oh: '3x3x3 à une main'
+        333ft: '3x3x3 avec les pieds'
+        clock: Clock
+        minx: Megaminx
+        pyram: Pyraminx
+        skewb: Skewb
+        sq1: Square-1
+        444bf: "Cube 4x4x4 à l'aveugle"
+        555bf: "Cube 5x5x5 à l'aveugle"
+        333mbf: "3x3x3 résolution multiple à l'aveugle"
+        333mbo: "3x3x3 résolution multiple à l'aveugle (à l'ancienne)"
+        magic: Magic
+        mmagic: 'Master Magic'
+rankings_explanations:
+    intro: 'Vous pouvez trouver sur cette page les classements pour des pays non-reconnus par la WCA.'
+    what_is_a_country_title: "C'est quoi un pays ?"
+    what_is_a_country_text: "Un pays n'est ni plus ni moins qu'une région géographique (parfois un pays est un état indépendant mais pas toujours)."
+    how: 'Comment puis-je être ajouté·e à un classement ?'
+    way_to_join: 'Vous pouvez en faire la demande sur le lien suivant :'
+    here: ici
+translation:
+    title: Traduction
+    projects:
+        titles:
+            comp_tabs: 'Onglets et pages de compétitions WCA'
+    wca_keys:
+        placeholder_example: 'Exemple :'
+        title: 'Traduction - Recherche par clé yaml des fichiers de traductions WCA'
+    search_button: Chercher
+    search:
+        form:
+            search_string: 'Chaine recherchée'
+            search_language: 'Langue de la recherche'
+            target_language: 'Langue cible'
+        title: 'Recherche de traductions'
+        has_been_found_in: 'a été trouvé dans :'
+        key: Clé
+    search_info_name: 'recherche:'
+join:
+    title: 'Rejoindre un classement'
+    criteria: Conditions
+    criteria_sentence: "Vous pouvez faire la demande d'ajout à un classement si vous êtes dans un des cas suivants :"
+    criteria_birthplace: 'Être originaire du pays (y être né ou y avoir grandi)'
+    criteria_family: 'Avoir un parent ou un grand-parent qui est originaire ou a grandit dans ce pays'
+    criteria_home: 'Habiter dans ce pays depuis au moins 3 ans'
+    ask: Demander
+    current_rankings: 'Vous êtes actuellement dans les classements suivants :'
+    already_here: '%country% : vous êtes déjà dans les classements de ce pays'
+    added: 'Vous avez été ajouté·e dans les classements du pays suivant : %country%'
+    too_many_countries: "Vous êtes déjà dans trop de pays (%person_nb_of_countries%). Le nombre maximum autorisé est %max_nb_of_countries%."
+admin:
+    index:
+        title: "Liens d'administration"
+        manage_countries: 'Gérer les pays'
+    addpeople:
+        title: "Ajouter quelqu'un dans les classements"
+    addadmin:
+        title: 'Ajouter un admin'
+        already_admin: '%user% est déjà admin'
+        promoted: '%user% a été promu admin'
+country:
+    common:
+        name: Nom
+        short: Code
+        img: Image
+    index:
+        title: 'Liste des pays'
+    show:
+        title: 'Nom:'
+    new:
+        title: 'Créer un nouveau pays'
+flag_generator:
+    a_bit_of_everything: 'Un peu de tout entre 6mm et 18mm'
+    flag: Drapeau
+    flag_height: 'Hauteur du drapeau'
+    format: Format
+    submit_button: 'Générer les autocollants de drapeaux'
+    title: "Générateur d'autocollants de drapeaux"
+    intro: "Vous n'aimez pas le drapeau qui est sur votre badge ? Vous pouvez générer un pdf avec votre drapeau ici, l'imprimer sur du papier autocollant et distribuer votre petit drapeau à vos comparses également intéressés. Si vous connaissez la hauteur du drapeau sur le badge, vous pouvez la choisir. Sinon, vous pouvez simplement choisir l'option avec un peu de tout et vous devriez avoir des formats qui fonctionnent pour la plupart des compétitions."
+menu:
+    translations:
+        title: Traductions
+        search_projects: Projets
+        search_wca_keys: 'Clés WCA'
+    tools:
+        title: Outils
+        flag_generator_menu: "Générateur d'autocollants de drapeaux"
+        groupifier: 'Groupifier (avec possibilité de génération de scorecards multilingues)'
+    settings:
+        dyslexia: Dyslexie
+vote_cdf:
+    page_title: "Coupe de France 2025"
+    title: "Choisissez les cubeurs et cubeuses que vous souhaitez voir composer l'équipe outsider pour la coupe de france 2025 !"
+    desc1: "Cette année, deux équipes s’affrontent ! Une équipe élite, les meilleur.es français.es de chacune des 8 épreuves (déjà sélectionnées par vos votes)… et VOTRE équipe ! Une équipe outsider, composée de 8 compétiteur.ices que vous allez pouvoir sélectionner vous-même."
+    desc2: "Composez l’équipe qui vous représentera, et qui aura le plus de chance de renverser celle des favoris au cours d’un affrontement qui vous réserve encore quelques surprises ! Vous pouvez voter jusqu’à dimanche 12h00."
+    already_voted: 'Vous avez voté. Mais vous pouvez toujours modifier votre vote ci-dessous:'
+    not_voted_yet: "Vous n'avez pas encore voté. Veuillez le faire ci-dessous."
+    check_psych_sheet: "N'hésitez pas à consulter les classements théoriques (psych sheets) <a href=\"https://www.worldcubeassociation.org/competitions/FrenchChampionship2025/registrations\" target=\"_blank\">ici</a>."
+    you_must_signin: "Vous devez vous connecter avec votre compte WCA pour pouvoir voter. Connectez-vous en cliquant "
+    here: ici

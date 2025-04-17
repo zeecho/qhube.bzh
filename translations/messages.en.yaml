@@ -1,145 +1,166 @@
 current_language: English
 base:
-  search: Search
-  profile: Profile
-  signin: Login with the WCA
-  signout: Logout
-  signin_successful: Logged in successfully as %user%
-  signout_successful: Logged out successfully!
+    search: Search
+    profile: Profile
+    signin: 'Login with the WCA'
+    signout: Logout
+    signin_successful: 'Logged in successfully as %user%'
+    signout_successful: 'Logged out successfully!'
 home:
-  title: Home
-  welcome: Welcome
-language: "Language:"
+    title: Home
+    welcome: Welcome
+language: 'Language:'
 submit: Valider
 rankings:
-  title: Rankings
-  data_from: 'Note: Except for the countries, all data come from the %wcaLink% (using their %wcaExportUrlFirstPart% SQL Export%wcaExportUrlSecondPart%)'
-  country: Country
-  code: Country code
-  event: Event
-  type: Type
-  show: Show
-  rankings_for: "Rankings for:"
-  name: Name
-  result: Result
-  competition: Competition
-  details: Detail
-  single: Single
-  average: Average
-  country_names:
-    anj: Anjou
-    arp: Arpitania
-    ast: Asturias
-    auv: Auvergne
-    bre: Burgundy
-    bzh: Brittany
-    cat: Catalonia
-    cha: Champagne
-    cor: Corsica
-    cym: Wales
-    dau: Dauphiné
-    els: Alsace
-    eng: Angoumois
-    euh: Basque Country
-    for: Forez
-    frc: Franche-Comté
-    gal: Galicia
-    ker: Cornwall
-    kur: Kurdistan
-    lou: Lorraine
-    nor: Normandy
-    occ: Occitania
-    poe: Poitou
-    pro: Provence
-    sav: Savoy
-    sco: Scotland
-    tué: Northern Ireland
-  events:
-    333: 3x3x3 Cube
-    222: 2x2x2 Cube
-    444: 4x4x4 Cube
-    555: 5x5x5 Cube
-    666: 6x6x6 Cube
-    777: 7x7x7 Cube
-    3333bf: 3x3x3 Blindfolded
-    333fm: 3x3x3 Fewest Moves
-    333oh: 3x3x3 One-Handed
-    clock: Clock
-    minx: Megaminx
-    pyram: Pyraminx
-    skewb: Skewb
-    sq1: Square-1
-    444bf: 4x4x4 Blindfolded
-    555bf: 5x5x5 Blindfolded
-    333mbf: 3x3x3 Multi-Blind
-    333ft: 3x3x3 With Feet
-    magic: Magic
-    mmagic: Master Magic
-    333mbo: 3x3x3 Multi-Blind Old Style
+    title: Rankings
+    data_from: 'Note: Except for the countries, all data come from the %wcaLink% (using their %wcaExportUrlFirstPart% SQL Export%wcaExportUrlSecondPart%)'
+    country: Country
+    code: 'Country code'
+    event: Event
+    type: Type
+    show: Show
+    rankings_for: 'Rankings for:'
+    name: Name
+    result: Result
+    competition: Competition
+    details: Detail
+    single: Single
+    average: Average
+    country_names:
+        anj: Anjou
+        arp: Arpitania
+        ast: Asturias
+        auv: Auvergne
+        bre: Burgundy
+        bzh: Brittany
+        cat: Catalonia
+        cha: Champagne
+        cor: Corsica
+        cym: Wales
+        dau: Dauphiné
+        els: Alsace
+        eng: Angoumois
+        euh: 'Basque Country'
+        for: Forez
+        frc: Franche-Comté
+        gal: Galicia
+        ker: Cornwall
+        kur: Kurdistan
+        lou: Lorraine
+        nor: Normandy
+        occ: Occitania
+        poe: Poitou
+        pro: Provence
+        sav: Savoy
+        sco: Scotland
+        tué: 'Northern Ireland'
+    events:
+        333: '3x3x3 Cube'
+        222: '2x2x2 Cube'
+        444: '4x4x4 Cube'
+        555: '5x5x5 Cube'
+        666: '6x6x6 Cube'
+        777: '7x7x7 Cube'
+        333bf: '3x3x3 Blindfolded'
+        333fm: '3x3x3 Fewest Moves'
+        333oh: '3x3x3 One-Handed'
+        clock: Clock
+        minx: Megaminx
+        pyram: Pyraminx
+        skewb: Skewb
+        sq1: Square-1
+        444bf: '4x4x4 Blindfolded'
+        555bf: '5x5x5 Blindfolded'
+        333mbf: '3x3x3 Multi-Blind'
+        333ft: '3x3x3 With Feet'
+        magic: Magic
+        mmagic: 'Master Magic'
+        333mbo: '3x3x3 Multi-Blind Old Style'
 rankings_explanations:
-  intro: On this page you can find rankings for countries which aren't recognised by the WCA.
-  what_is_a_country_title: What is a country?
-  what_is_a_country_text: A country is no more than a geographic area (sometimes it's an independent state but not always.
-  how: How can I be added to some rankings?
-  way_to_join: "You can ask for it on this link:"
-  here: here
+    intro: "On this page you can find rankings for countries which aren't recognised by the WCA."
+    what_is_a_country_title: 'What is a country?'
+    what_is_a_country_text: "A country is no more than a geographic area (sometimes it's an independent state but not always."
+    how: 'How can I be added to some rankings?'
+    way_to_join: 'You can ask for it on this link:'
+    here: here
 translation:
-  title: Translation
-  projects:
-    titles:
-      comp_tabs: WCA competition tabs and pages
-  search_info_name: "search:"
-  search_button: Search
-  search:
-    title: Translation search
-    has_been_found_in: "has been found in:"
-    key: Key
-    form:
-      search_string: Search string
-      search_language: Search language
-      target_language: Target language
-  wca_keys:
-    title: Translation - Search by WCA yaml keys
-    placeholder_example: "Example:"
+    title: Translation
+    projects:
+        titles:
+            comp_tabs: 'WCA competition tabs and pages'
+    search_info_name: 'search:'
+    search_button: Search
+    search:
+        title: 'Translation search'
+        has_been_found_in: 'has been found in:'
+        key: Key
+        form:
+            search_string: 'Search string'
+            search_language: 'Search language'
+            target_language: 'Target language'
+    wca_keys:
+        title: 'Translation - Search by WCA yaml keys'
+        placeholder_example: 'Example:'
 join:
-  title: Joining rankings
-  criteria: Criteria
-  criteria_sentence: "You can request to be added in a ranking if you meet at least one of the following criteria:"
-  criteria_birthplace: Be from the country (born or raised there)
-  criteria_family: Have a parent or grandparent who is from or grew up in this country
-  criteria_home: Have lived in this country for at least 3 years
-  ask: Ask
-  current_rankings: "You're currently in the following rankings:"
-  already_here: "%country%: you're already on this country's rankings"
-  added: "You've been added to this country's rankings: %country%"
+    title: 'Joining rankings'
+    criteria: Criteria
+    criteria_sentence: 'You can request to be added in a ranking if you meet at least one of the following criteria:'
+    criteria_birthplace: 'Be from the country (born or raised there)'
+    criteria_family: 'Have a parent or grandparent who is from or grew up in this country'
+    criteria_home: 'Have lived in this country for at least 3 years'
+    ask: Ask
+    current_rankings: "You're currently in the following rankings:"
+    already_here: "%country%: you're already on this country's rankings"
+    added: "You've been added to this country's rankings: %country%"
+    too_many_countries: "You're in too many countries (%person_nb_of_countries%). The maximum number allowed is %max_nb_of_countries%."
 admin:
-  index:
-    title: Administrations links
-    manage_countries: Manage countries
-  addpeople:
-    title: Add someone to the rankings
-  addcountry:
-    title: Add a country
-  addadmin:
-    title: Add an admin
-    already_admin: '%user% is already an admin'
-    promoted: '%user% has been promoted to admin'
+    index:
+        title: 'Administrations links'
+        manage_countries: 'Manage countries'
+    addpeople:
+        title: 'Add someone to the rankings'
+    addcountry:
+        title: 'Add a country'
+    addadmin:
+        title: 'Add an admin'
+        already_admin: '%user% is already an admin'
+        promoted: '%user% has been promoted to admin'
 menu:
-  translations:
-    title: Translations
-    search_projects: Search in projects
-    search_wca_keys: Search by wca yaml keys
-  tools:
-    title: Tools
-    flag_generator_menu: Flag sheet generator
-    groupifier: Groupifier (with multi-language scorecards support)
-  settings:
-    dyslexia: Dyslexia
+    translations:
+        title: Translations
+        search_projects: 'Search in projects'
+        search_wca_keys: 'Search by wca yaml keys'
+    tools:
+        title: Tools
+        flag_generator_menu: 'Flag stickers generator'
+        groupifier: 'Groupifier (with multi-language scorecards support)'
+    settings:
+        dyslexia: Dyslexia
 flag_generator:
-  intro: "You don't like the flag on your competition badge? You can generate a pdf of your flag here, print it on a sticker paper sheet and distribute your small flag stickers to your fellow cubers who are interested as well. If you know the width of the flag on the badge, you can choose it there. If you don't, just pick the option with a bit of everything and you should be ready for most competitions."
-  title: "Flag sheet generator"
-  flag: "Flag"
-  flag_height: "Flag height"
-  a_bit_of_everything: "A bit of everything between 6mm and 18mm"
-  format: "Format"
-  submit_button: "Generate flag sheet"
+    intro: "You don't like the flag on your competition badge? You can generate a pdf of your flag here, print it on a sticker paper sheet and distribute your small flag stickers to your fellow cubers who are interested as well. If you know the height of the flag on the badge, you can choose it there. If you don't, just pick the option with a bit of everything and you should be ready for most competitions."
+    title: 'Flag stickers generator'
+    flag: Flag
+    flag_height: 'Flag height'
+    a_bit_of_everything: 'A bit of everything between 6mm and 18mm'
+    format: Format
+    submit_button: 'Generate flag sheet'
+crud:
+    delete: Delete
+    submit: Submit
+    create_new: 'Create new'
+    actions: Actions
+    show: Show
+    edit: Edit
+    no_records_found: 'No records found'
+    back_to_list: 'Back to list'
+country:
+    index:
+        title: Countries
+    common:
+        name: Name
+        short: Code
+        img: Image
+    show:
+        title: 'Name:'
+    new:
+        title: 'Create a new country'
