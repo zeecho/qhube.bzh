@@ -23,6 +23,9 @@ class CdfFormController extends AbstractController
             $form = null;
             $alreadyVoted = null;
 
+            $timezone = new \DateTimeZone('Europe/Brussels');
+            $isClosed = new \DateTime('now', $timezone) > new \DateTime('2025-04-20 12:00:00', $timezone);
+
             if ($signedIn) {
                 $userId = $security->getUser()->getId();
                 $vote = $votesCdfRepository->find($userId);
@@ -33,21 +36,25 @@ class CdfFormController extends AbstractController
                     $alreadyVoted = false;
                 }
 
-                $form = $this->createForm(VotesCdfType::class, $vote);
+                if (!$isClosed) {
+                    $form = $this->createForm(VotesCdfType::class, $vote);
 
-                $form->handleRequest($request);
-                if ($form->isSubmitted() && $form->isValid()) {
-                    $vote->setVoter($userId);
+                    $form->handleRequest($request);
+                    if ($form->isSubmitted() && $form->isValid()) {
+                        $vote->setVoter($userId);
 
-                    $votesCdfRepository->save($vote, true);
-                    $alreadyVoted = true;
+                        $votesCdfRepository->save($vote, true);
+                        $alreadyVoted = true;
+                    }
                 }
             }
 
             return $this->render('cdf_form/index.html.twig', [
                 'signed_in' => $signedIn,
+                'vote' => $vote,
                 'form' => $form,
                 'already_voted' => $alreadyVoted,
+                'closed' => $isClosed,
             ]);
     }
 

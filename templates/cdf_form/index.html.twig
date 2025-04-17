@@ -10,14 +10,37 @@
         </p>
         <p class="fw-bold">{{ 'vote_cdf.desc1'|trans }} {{ 'vote_cdf.desc2'|trans }}</p>
 
+        {% if closed %}
+            <p class="p-3 text-danger-emphasis bg-success-subtle border border-success-subtle rounded-3">Les votes sont clos.</p>
+        {% endif %}
         {% if signed_in %}
-            {% if already_voted %}
-                <p class="p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3">{{ 'vote_cdf.already_voted'|trans }}</p>
+            {% if closed %}
+                {% if already_voted %}
+                    <p>Voici ce que vous avez voté :</p>
+                    <ul>
+                        <li>{{ 'rankings.events.333'|trans }} : <a class="text-info" href="https://www.worldcubeassociation.org/persons/{{ vote.three }}" target="_blank">{{ vote.three }}</a></li>
+                        <li>{{ 'rankings.events.222'|trans }} : <a class="text-info" href="https://www.worldcubeassociation.org/persons/{{ vote.two }}" target="_blank">{{ vote.two }}</a></li>
+                        <li>{{ 'rankings.events.444'|trans }} : <a class="text-info" href="https://www.worldcubeassociation.org/persons/{{ vote.four }}" target="_blank">{{ vote.four }}</a></li>
+                        <li>{{ 'rankings.events.555'|trans }} : <a class="text-info" href="https://www.worldcubeassociation.org/persons/{{ vote.five }}" target="_blank">{{ vote.five }}</a></li>
+                        <li>{{ 'rankings.events.333bf'|trans }} : <a class="text-info" href="https://www.worldcubeassociation.org/persons/{{ vote.bld }}" target="_blank">{{ vote.bld }}</a></li>
+                        <li>{{ 'rankings.events.333oh'|trans }} : <a class="text-info" href="https://www.worldcubeassociation.org/persons/{{ vote.oh }}" target="_blank">{{ vote.oh }}</a></li>
+                        <li>{{ 'rankings.events.pyram'|trans }} : <a class="text-info" href="https://www.worldcubeassociation.org/persons/{{ vote.pyra }}" target="_blank">{{ vote.pyra }}</a></li>
+                        <li>{{ 'rankings.events.skewb'|trans }} : <a class="text-info" href="https://www.worldcubeassociation.org/persons/{{ vote.skewb }}" target="_blank">{{ vote.skewb }}</a></li>
+                    </ul>
+                {% else %}
+                    <p class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">Vous n'avez pas voté</p>
+                {% endif %}
             {% else %}
-                <p class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">{{ 'vote_cdf.not_voted_yet'|trans }}</p>
+                {% if already_voted %}
+                    <p class="p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3">{{ 'vote_cdf.already_voted'|trans }}</p>
+                {% else %}
+                    <p class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">{{ 'vote_cdf.not_voted_yet'|trans }}</p>
+                {% endif %}
+                <p class="p-3 text-secondary-emphasis bg-secondary-subtle border border-primary-subtle rounded-3">{{ 'vote_cdf.check_psych_sheet'|trans|raw }}</p>
+                {{ form(form) }}
             {% endif %}
-            <p class="p-3 text-secondary-emphasis bg-secondary-subtle border border-primary-subtle rounded-3">{{ 'vote_cdf.check_psych_sheet'|trans|raw }}</p>
-            {{ form(form) }}
+
+
         {% else %}
             <p class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
                 {{ 'vote_cdf.you_must_signin'|trans }} <a href="{{ path('signin') }}">{{ 'vote_cdf.here'|trans }}</a>.
