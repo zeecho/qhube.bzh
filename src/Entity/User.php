@@ -88,6 +88,13 @@ class User implements UserInterface
         return $this;
     }
 
+    public function removeRole($role): self
+    {
+        unset($this->roles[array_search($role, $this->roles)]);
+
+        return $this;
+    }
+
     /**
      * @see UserInterface
      */
