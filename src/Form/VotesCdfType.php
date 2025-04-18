@@ -44,52 +44,53 @@ class VotesCdfType extends AbstractType
             $registrationsByEvent[$key] = $registrationEvent;
         }
 
+        $eliteTeamString = $this->translator->trans('vote_cdf.elite_team');
         $placeholder = '-';
 
         $builder
             ->add('three', ChoiceType::class, [
                 'choices' => $registrationsByEvent['333'],
-                'label' => $this->translator->trans('rankings.events.333') . ' (Équipe Élite : Juliette Sébastien)',
+                'label' => $this->translator->trans('rankings.events.333') . ' (' . $eliteTeamString . ' Juliette Sébastien)',
                 'placeholder' => $placeholder,
 
             ])
             ->add('two', ChoiceType::class, [
                 'choices' => $registrationsByEvent['222'],
-                'label' => $this->translator->trans('rankings.events.222') . ' (Équipe Élite : Diego Fraile)',
+                'label' => $this->translator->trans('rankings.events.222') . ' (' . $eliteTeamString . ' Diego Fraile)',
                 'placeholder' => $placeholder,
             ])
             ->add('four', ChoiceType::class, [
                 'choices' => $registrationsByEvent['444'],
-                'label' => $this->translator->trans('rankings.events.444') . ' (Équipe Élite : Alexandre Carlier)',
+                'label' => $this->translator->trans('rankings.events.444') . ' (' . $eliteTeamString . ' Alexandre Carlier)',
                 'placeholder' => $placeholder,
             ])
             ->add('five', ChoiceType::class, [
                 'choices' => $registrationsByEvent['555'],
-                'label' => $this->translator->trans('rankings.events.555') . ' (Équipe Élite : Abdelhak Kaddour)',
+                'label' => $this->translator->trans('rankings.events.555') . ' (' . $eliteTeamString . ' Abdelhak Kaddour)',
                 'placeholder' => $placeholder,
             ])
             ->add('bld', ChoiceType::class, [
                 'choices' => $registrationsByEvent['333bf'],
-                'label' => $this->translator->trans('rankings.events.333bf') . ' (Équipe Élite : Charles Daloz-Baltenberger)',
+                'label' => $this->translator->trans('rankings.events.333bf') . ' (' . $eliteTeamString . ' Charles Daloz-Baltenberger)',
                 'placeholder' => $placeholder,
             ])
             ->add('oh', ChoiceType::class, [
                 'choices' => $registrationsByEvent['333oh'],
-                'label' => $this->translator->trans('rankings.events.333oh') . ' (Équipe Élite : Nicolas Gertner Kilian)',
+                'label' => $this->translator->trans('rankings.events.333oh') . ' (' . $eliteTeamString . ' Nicolas Gertner Kilian)',
                 'placeholder' => $placeholder,
             ])
             ->add('pyra', ChoiceType::class, [
                 'choices' => $registrationsByEvent['pyram'],
-                'label' => $this->translator->trans('rankings.events.pyram') . ' (Équipe Élite : Jules Desjardin)',
+                'label' => $this->translator->trans('rankings.events.pyram') . ' (' . $eliteTeamString . ' Jules Desjardin)',
                 'placeholder' => $placeholder,
             ])
             ->add('skewb', ChoiceType::class, [
                 'choices' => $registrationsByEvent['skewb'],
-                'label' => $this->translator->trans('rankings.events.skewb') . ' (Équipe Élite : Anthony Lafourcade)',
+                'label' => $this->translator->trans('rankings.events.skewb') . ' (' . $eliteTeamString . ' Anthony Lafourcade)',
                 'placeholder' => $placeholder,
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Voter'
+                'label' => $this->translator->trans('vote_cdf.vote')
             ]);
 
     }

@@ -188,3 +188,6 @@ vote_cdf:
     check_psych_sheet: "N'hésitez pas à consulter les classements théoriques (psych sheets) <a href=\"https://www.worldcubeassociation.org/competitions/FrenchChampionship2025/registrations\" target=\"_blank\">ici</a>."
     you_must_signin: "Vous devez vous connecter avec votre compte WCA pour pouvoir voter. Connectez-vous en cliquant "
     here: ici
+    what_you_voted_for: 'Voici ce que vous avez voté :'
+    elite_team: 'Équipe Élite :'
+    vote: 'Voter'

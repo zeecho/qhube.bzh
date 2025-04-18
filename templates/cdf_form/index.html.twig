@@ -16,7 +16,7 @@
         {% if signed_in %}
             {% if closed %}
                 {% if already_voted %}
-                    <p>Voici ce que vous avez voté :</p>
+                    <p>{{ 'vote_cdf.what_you_voted_for'|trans }}</p>
                     <ul>
                         <li>{{ 'rankings.events.333'|trans }} : <a class="text-info" href="https://www.worldcubeassociation.org/persons/{{ vote.three }}" target="_blank">{{ vote.three }}</a></li>
                         <li>{{ 'rankings.events.222'|trans }} : <a class="text-info" href="https://www.worldcubeassociation.org/persons/{{ vote.two }}" target="_blank">{{ vote.two }}</a></li>

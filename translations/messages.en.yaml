@@ -79,7 +79,7 @@ rankings:
 rankings_explanations:
     intro: "On this page you can find rankings for countries which aren't recognised by the WCA."
     what_is_a_country_title: 'What is a country?'
-    what_is_a_country_text: "A country is no more than a geographic area (sometimes it's an independent state but not always."
+    what_is_a_country_text: "A country is no more than a geographic area (sometimes it's an independent state but not always)."
     how: 'How can I be added to some rankings?'
     way_to_join: 'You can ask for it on this link:'
     here: here
@@ -164,3 +164,16 @@ country:
         title: 'Name:'
     new:
         title: 'Create a new country'
+vote_cdf:
+    page_title: 'French Cup 2025'
+    title: "Choose the cubers you'd like to see on the outsider team for the French Cup 2025!"
+    desc1: "This year, two teams are competing! An elite team, made up of the best French competitors in each of the 8 events (already selected by your votes)... and YOUR team! An outsider team, made up of 8 competitors you can select yourself."
+    desc2: "Compose the team that will represent you, and that will have the best chance of toppling the favorites in a confrontation that still has a few surprises to give5! You can vote until Sunday 12:00 noon."
+    already_voted: "You've voted. But you can still change your vote below:"
+    not_voted_yet: "You haven't voted yet. Please do so below."
+    check_psych_sheet: "Feel free to consult the psych sheets"
+    you_must_signin: "You must be logged in with your WCA account to vote. Log in by clicking "
+    here: "here"
+    what_you_voted_for: "Here's what you voted for:"
+    elite_team: 'Elite Team:'
+    vote: 'Vote'
