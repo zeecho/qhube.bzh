@@ -41,6 +41,7 @@ rankings:
         aun: Aunis
         auv: Auvergne
         ber: Berry
+        boa: Bavière
         bre: Bourgogne
         bzh: Bretagne
         cat: Catalogne
@@ -55,6 +56,7 @@ rankings:
         frc: Franche-Comté
         gal: Galice
         gas: Gascogne
+        iba: 'Iles Baléares'
         ker: Cornouailles
         kur: Kurdistan
         lou: Lorraine
@@ -66,11 +68,16 @@ rankings:
         pic: Picardie
         poe: Poitou
         pro: Provence
+        pva: 'Pays valencien'
+        sap: Sápmi
+        sar: Sardaigne
         sav: Savoie
         sco: Écosse
         sen: Saintonge
+        sic: Sicile
         tou: Touraine
         tué: 'Irlande du Nord'
+        ven: Vénétie
         vlo: Flandres
     events:
         222: 'Cube 2x2x2'
