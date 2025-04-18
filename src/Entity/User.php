@@ -83,7 +83,9 @@ class User implements UserInterface
 
     public function addRole($role): self
     {
-        $this->roles[] = $role;
+        if (!in_array($role, $this->getRoles())) {
+            $this->roles[] = $role;
+        }
 
         return $this;
     }
