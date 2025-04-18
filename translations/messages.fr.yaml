@@ -38,7 +38,9 @@ rankings:
         anj: Anjou
         arp: Arpitanie
         ast: Asturies
+        aun: Aunis
         auv: Auvergne
+        ber: Berry
         bre: Bourgogne
         bzh: Bretagne
         cat: Catalogne
@@ -52,16 +54,24 @@ rankings:
         for: Forez
         frc: Franche-Comté
         gal: Galice
+        gas: Gascogne
         ker: Cornouailles
         kur: Kurdistan
         lou: Lorraine
+        mai: Maine
         nor: Normandie
         occ: Occitanie
+        orl: Orléanais
+        per: Perche
+        pic: Picardie
         poe: Poitou
         pro: Provence
         sav: Savoie
         sco: Écosse
+        sen: Saintonge
+        tou: Touraine
         tué: 'Irlande du Nord'
+        vlo: Flandres
     events:
         222: 'Cube 2x2x2'
         333: 'Cube 3x3x3'
