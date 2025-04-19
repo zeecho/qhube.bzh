@@ -79,6 +79,17 @@ rankings:
         tué: 'Irlande du Nord'
         ven: Vénétie
         vlo: Flandres
+        wal: Wallonie
+        fry: Frise
+        grl: Groenland
+        fro: 'Iles Féroé'
+        ala: Åland
+        ncl: Kanaky
+        glp: Guadeloupe
+        guf: Guyane
+        mtq: Martinique
+        myt: Mayotte
+        reu: 'La Réunion'
     events:
         222: 'Cube 2x2x2'
         333: 'Cube 3x3x3'

@@ -54,6 +54,34 @@ rankings:
         sav: Savoy
         sco: Scotland
         tué: 'Northern Ireland'
+        aun: Aunis
+        ber: Berry
+        boa: Bavaria
+        gas: Gascony
+        iba: Balearic Islands
+        mai: Maine (Europe)
+        orl: Orléanais
+        per: Perche
+        pic: Picardy
+        pva: Valencian Country
+        sap: Sápmi
+        sar: Sardinia
+        sen: Saintonge
+        sic: Sicily
+        tou: Touraine
+        ven: Veneto
+        vlo: Flanders
+        wal: Wallonie
+        fry: Frise
+        grl: Groenland
+        fro: Iles Féroé
+        ala: Åland
+        ncl: Kanaky
+        glp: Guadeloupe
+        guf: Guyane
+        mtq: Martinique
+        myt: Mayotte
+        reu: La Réunion
     events:
         333: '3x3x3 Cube'
         222: '2x2x2 Cube'
