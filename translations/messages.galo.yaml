@@ -1,135 +1,202 @@
 current_language: Galo
 base:
-  search: Rechercher
-  profile: Filomie
-  signin: S'abouter o la WCA
-  signout: Coûper
-  signin_successful: Ben aboutë·ée come %user%
-  signout_successful: Ben coûpë·ée!
+    search: Rechercher
+    profile: Filomie
+    signin: "S'abouter o la WCA"
+    signout: Coûper
+    signin_successful: 'Ben aboutë·ée come %user%'
+    signout_successful: 'Ben coûpë·ée!'
 crud:
-  back_to_list: Ertour a la list
-  show: Vaer
-  edit: Chanjer
-  delete: Enlever
-  submit: Valider
-  actions: Actions
-  create_new: Créer
-  no_records_found: Ren de terouë
+    back_to_list: 'Ertour a la list'
+    show: Vaer
+    edit: Chanjer
+    delete: Enlever
+    submit: Valider
+    actions: Actions
+    create_new: Créer
+    no_records_found: 'Ren de terouë'
 home:
-  title: La bone arive
-  welcome: La bone arive
-language: "Parlement :"
+    title: 'La bone arive'
+    welcome: 'La bone arive'
+language: 'Parlement :'
 rankings:
-  title: Pllacements
-  data_from: "Mencion : Pâssë les payiz, les donées-la s'orinent de la %wcaLink% o lou %wcaExportUrlFirstPart% SQL export %wcaExportUrlSecondPart%"
-  country: Payiz
-  code: Code du payiz
-  event: Assaot
-  type: Tipe
-  show: Vaer
-  rankings_for: "Pllacement de :"
-  name: Nom
-  result: Fezûre
-  competition: Course
-  details: Detâil
-  single: Meillou temp
-  average: Mouayene
-  country_names:
-    anj: Anjou
-    arp: Arpitanie
-    ast: Asturies
-    auv: Aovergne
-    bre: Bourgogne
-    bzh: Bertègn
-    cat: Catalogne
-    cha: Champagne
-    cor: Corse
-    cym: Payiz de Gale
-    dau: Dauphiné
-    els: Alzace
-    eng: Angoumois
-    euh: Payiz Baqse
-    for: Forez
-    frc: Franche-Contë
-    gal: Galice
-    ker: Cornouaille
-    kur: Kurdistan
-    lou: Loraine
-    nor: Normandie
-    occ: Oxitanie
-    poe: Paitou
-    pro: Provence
-    sav: Savoué
-    sco: Ecosse
-    tué: Irlande du Haot
-  events:
-    '222': Qhube 2x2x2
-    '333': Qhube 3x3x3
-    '444': Qhube 4x4x4
-    '555': Qhube 5x5x5
-    '666': Qhube 6x6x6
-    '777': Qhube 7x7x7
-    333bf: 3x3x3 bôgné
-    333fm: 3x3x3 meins de mouvements possibl
-    333oh: 3x3x3 o ene main
-    333ft: 3x3x3 o les piës
-    clock: Clock
-    minx: Megaminx
-    pyram: Pyraminx
-    skewb: Skewb
-    sq1: Square-1
-    444bf: Qhube 4x4x4 bôgné
-    555bf: Qhube 5x5x5 bôgné
-    333mbf: 3x3x3 le pus de qhubes possibl bôgné
-    333mbo: 3x3x3 le pus de qhubes possibl bôgné (ancien)
-    magic: Magic
-    mmagic: Master Magic
-rankings_explanations:
-  intro: Vous pouéz terouer su la paije-la les pllacements pour des payiz qi ne sont pouint erqenûs o la WCA.
-  what_is_a_country_title: Qhi qe c'ét don un payiz?
-  what_is_a_country_text: Un payiz ét ni pus ni meins q'ene rejion jéyografiqe (qheuqes fais un payiz ét un etat déheûdë meins pouint terjous).
-  how: Coment qe je peûs fére pour étr den un pllacement?
-  way_to_join: "Vous pouéz le demander su le lien-la :"
-  here: ilë
-translation:
-  title: Terlaterie
-join:
-  title: Étr ajoutë·ée den les pllacements
-  criteria: Condicions
-  criteria_sentence: "Vous pouéz fére la demande pour étr ajoutë·ée den un pllacement si qe vous étes den un des câs a sieudr :"
-  criteria_birthplace: S'oriner (étr në·ée ou avair grandi) den le payiz-la
-  criteria_family: Avair un parent ou un grand-parent qi s'orine ou a grandi den le payiz-la
-  criteria_home: Rester den le payiz-la durant au meins 3 années de temp
-  ask: Demander
-  current_rankings: "Mézë v'étes den les pllacements-la :"
-  already_here: "%country% : V'étes deja den les pllacements du pays-la"
-  too_many_countries: "V'étes dija den ben de trop de payiz (%person_nb_of_countries%). %max_nb_of_countries% ét le nombre maximum possibl."
-  added: "V'avéz été ajoutë·ée den les pllacements du pays a sieudr : %country%"
-admin:
-  index:
-    title: Liens d'administracion
-    manage_countries: Mener les payiz
-  addpeople:
-    title: Ajouter qheuq'un den les pllacements
-    title_many: "Ajouter puzieurs jiens den les pllacements"
-    list_of_wca_id: "Afilonjée d'IDs WCA (yun a chaqe rande)"
-  addcountry:
-    title: Ajouter un payiz
-  addadmin:
-    title: Ajouter un rôle
-    already_admin: '%user% a deja le role-la'
-    promoted: "Le rôle %role% vient d'étr bâillë a %user%"
-country:
-  common:
+    title: Pllacements
+    data_from: "Mencion : Pâssë les payiz, les donées-la s'orinent de la %wcaLink% o lou %wcaExportUrlFirstPart% SQL export %wcaExportUrlSecondPart%"
+    country: Payiz
+    code: 'Code du payiz'
+    event: Assaot
+    type: Tipe
+    show: Vaer
+    rankings_for: 'Pllacement de :'
     name: Nom
-    short: Code
-    img: Imaïje
-  index:
-    title: Afilonjée des payiz
-  show:
-    title: "Nom:"
-  new:
-    title: Créer un nouviao payiz
+    result: Fezûre
+    competition: Course
+    details: Detâil
+    single: 'Meillou temp'
+    average: Mouayene
+    country_names:
+        anj: Anjou
+        arp: Arpitanie
+        ast: Asturies
+        auv: Aovergne
+        bre: Bourgogne
+        bzh: Bertègn
+        cat: Catalogne
+        cha: Champagne
+        cor: Corse
+        cym: 'Payiz de Gale'
+        dau: Dauphiné
+        els: Alzace
+        eng: Angoumoué
+        euh: 'Payiz Baxe'
+        for: Forez
+        frc: Franche-Contë
+        gal: Galice
+        ker: Cornouaille
+        kur: Kurdistan
+        lou: Loraine
+        nor: Normandi
+        occ: Oxitanie
+        poe: Paitou
+        pro: Provence
+        sav: Savoué
+        sco: Ecosse
+        tué: 'Irlande du Haot'
+        aun: Aonis
+        ber: Beri
+        gas: Gaskogn
+        mai: Maine
+        orl: "Payiz d'Orléan"
+        per: Perch
+        pic: Picardi
+        sen: Sintonje
+        tou: Tourène
+        vlo: Flandr
+        sap: Sápmi
+        sar: Sardègne
+        sic: Sicile
+        ven: Vénéssie
+        iba: Iles Baléares
+        pva: Payiz de Valence
+        boa: Bavière
+        wal: Waloni
+        fry: Frize
+        grl: Groènlande
+        fro: Féroës
+        ala: Oland
+        ncl: Kanaky
+        glp: Gwadloupe
+        guf: Gwiyane
+        mtq: Martiniq
+        myt: Mayote
+        reu: Ile de la Réunion
+        jey: Jèrzë
+        ggy: Guèrnezë
+        imn: Ile de Mane
+        aia: Anguilla
+        abw: Aruba
+        bmu: Bermude
+        bon: Bonaire
+        sta: Saint-Eustache
+        sab: Saba
+        cuw: Curassao
+        sxm: Sint Maarten
+        pyf: Polinézie françaeze
+        por: Polinézie
+        cyi: Iles Cahimans
+        cxr: Ile Cristmas
+        cck: Iles Cocos (Qiling)
+        cok: Iles Qouq
+    events:
+        222: 'Qhube 2x2x2'
+        333: 'Qhube 3x3x3'
+        444: 'Qhube 4x4x4'
+        555: 'Qhube 5x5x5'
+        666: 'Qhube 6x6x6'
+        777: 'Qhube 7x7x7'
+        333bf: '3x3x3 bôgné'
+        333fm: '3x3x3 meins de mouvements possibl'
+        333oh: '3x3x3 o ene main'
+        333ft: '3x3x3 o les piës'
+        clock: Clock
+        minx: Megaminx
+        pyram: Pyraminx
+        skewb: Skewb
+        sq1: Square-1
+        444bf: 'Qhube 4x4x4 bôgné'
+        555bf: 'Qhube 5x5x5 bôgné'
+        333mbf: '3x3x3 le pus de qhubes possibl bôgné'
+        333mbo: '3x3x3 le pus de qhubes possibl bôgné (ancien)'
+        magic: Magic
+        mmagic: 'Master Magic'
+rankings_explanations:
+    intro: 'Vous pouéz terouer su la paije-la les pllacements pour des payiz qi ne sont pouint erqenûs o la WCA.'
+    what_is_a_country_title: "Qhi qe c'ét don un payiz?"
+    what_is_a_country_text: "Un payiz ét ni pus ni meins q'ene rejion jéyografiqe (qheuqes fais un payiz ét un etat déheûdë meins pouint terjous)."
+    how: 'Coment qe je peûs fére pour étr den un pllacement?'
+    way_to_join: 'Vous pouéz le demander su le lien-la :'
+    here: ilë
+translation:
+    title: Terlaterie
+    projects:
+        titles:
+            comp_tabs: Ongllet e pajes des courses
+    wca_keys:
+        placeholder_example: Exempl
+    search_button: Encercher
+    search:
+        form:
+            search_string: "Texe encerchë"
+            search_language: "Parlement de l'encerche"
+            target_language: "Parlements cibls"
+        title: "Encerche de terlateries"
+        has_been_found_in: "terouë den:"
+        key: 'Cllë'
+    search_info_name: 'encerche:'
+join:
+    title: 'Étr ajoutë·ée den les pllacements'
+    criteria: Condicions
+    criteria_sentence: 'Vous pouéz fére la demande pour étr ajoutë·ée den un pllacement si qe vous étes den un des câs a sieudr :'
+    criteria_birthplace: "S'oriner (étr në·ée ou avair grandi) den le payiz-la"
+    criteria_family: "Avair un parent ou un grand-parent qi s'orine ou a grandi den le payiz-la"
+    criteria_home: 'Rester den le payiz-la durant au meins 3 années de temp'
+    ask: Demander
+    current_rankings: "Mézë v'étes den les pllacements-la :"
+    already_here: "%country% : V'étes deja den les pllacements du pays-la"
+    too_many_countries: "V'étes dija den ben de trop de payiz (%person_nb_of_countries%). %max_nb_of_countries% ét le nombre maximum possibl."
+    added: "V'avéz été ajoutë·ée den les pllacements du pays a sieudr : %country%"
+admin:
+    index:
+        title: "Liens d'administracion"
+        manage_countries: 'Mener les payiz'
+    addpeople:
+        title: "Ajouter qheuq'un den les pllacements"
+        title_many: 'Ajouter puzieurs jiens den les pllacements'
+        list_of_wca_id: "Afilonjée d'IDs WCA (yun a chaqe rande)"
+    addcountry:
+        title: 'Ajouter un payiz'
+    addadmin:
+        title: 'Ajouter un rôle'
+        already_admin: '%user% a deja le role-la'
+        promoted: "Le rôle %role% vient d'étr bâillë a %user%"
+country:
+    common:
+        name: Nom
+        short: Code
+        img: Imaïje
+    index:
+        title: 'Afilonjée des payiz'
+    show:
+        title: 'Nom:'
+    new:
+        title: 'Créer un nouviao payiz'
+    mass_import:
+        format:
+            title: Format
+            explanations: 'nom_d_orine_du_payiz	code_de_touéz_lettrs	nom_de_l_imaïje	terlaterie_1	terlaterie_2	…'
+            eg: 'pareme:'
+        added: 'Les payiz ont të ben ajoutës'
+        title: 'Fére veni puzieurs payiz'
 menu:
     translations:
         title: Terlaterie
@@ -137,8 +204,16 @@ menu:
         search_wca_keys: 'Cllës WCA'
     tools:
         title: Afutiaos
-        flag_generator_menu: "Jenerateur de colants de drapiaos"
+        flag_generator_menu: 'Jenerateur de colants de drapiaos'
         groupifier: 'Groupifier (o la possibletë de fére des feuilles de fezûres mile-parlements)'
     settings:
         dyslexia: Delèrance
         dyslexia_help: "Emouver la fonte OpenDyslexic q'ét censement pus ézée pour les siens q'ont de la delèrance"
+flag_generator:
+    a_bit_of_everything: "Un p'tit de tout entr 6 et 18 mm"
+    flag: Drapè
+    flag_height: 'Haotou du drapè'
+    format: Format
+    submit_button: 'Jenerer les colants de drapiaos'
+    title:  'Jenerateur de colants de drapiaos'
+    intro: "V'étez pouint haitë d'o le drapè q'ét su votr badj? Ilë vous pouéz jenerer un pdf o votr drapè, le mouler su du pâpier colant e egâiller votr p'tit drapè a tous les siens qi seraient haitës. Si qe vous qenéssez la haotou du drapè qe n-i a su le badj aloure vous pouéz la chouézi. Aotrment d'aotr vous pouéz chouézi l'opcion o un p'tit de tout e 'la devraet doner des formats qi rouélent pour la pupart des courses."
