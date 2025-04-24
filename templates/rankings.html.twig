@@ -35,7 +35,14 @@
         <div id="rankings">
             {% set flagUrl = 'flags/' ~ country.img %}
             <h3 >{{ 'rankings.rankings_for' | trans }}</h3>
-            <h3 class="text-center"><img class="medium-flag" src="{{ asset(flagUrl) }}" alt=""> {{ ('rankings.country_names.' ~ country.short) | trans }} ({{ country.name | trans }}) — {{ ('rankings.events.' ~ rankingsEvent.id) | trans }} - {{ ('rankings.' ~ type) | trans }}</h3>
+            <h3 class="text-center"><img class="medium-flag" src="{{ asset(flagUrl) }}" alt="">
+                {% set country_name_translated = (('rankings.country_names.' ~ country.short) | trans) %}
+                {{ country_name_translated }}
+                {% if country_name_translated not in country.name %}
+                    ({{ country.name }})
+                {% endif %}
+                — {{ ('rankings.events.' ~ rankingsEvent.id) | trans }} - {{ ('rankings.' ~ type) | trans }}
+            </h3>
             <table id="rankings-table" class="table table-dark table-striped table-hover">
                 <thead>
                     <tr>
