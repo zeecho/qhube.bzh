@@ -1,0 +1,13 @@
+{% extends "admin/admin.html.twig" %}
+{% block title %}
+    {{ 'admin.addpeople.title_many'|trans }}
+{% endblock %}
+
+{% block body %}
+    <div id="content">
+        <h3>{{ 'admin.addpeople.title_many'|trans }}</h3>
+        <div>
+            {{ form(form) }}
+        </div>
+    </div>
+{% endblock %}

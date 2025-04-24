@@ -164,12 +164,14 @@ admin:
         manage_countries: 'Manage countries'
     addpeople:
         title: 'Add someone to the rankings'
+        title_many: 'Add several people to the rankings'
+        list_of_wca_id: 'List of WCA IDs (one per line)'
     addcountry:
         title: 'Add a country'
     addadmin:
-        title: 'Add an admin'
-        already_admin: '%user% is already an admin'
-        promoted: '%user% has been promoted to admin'
+        title: 'Add a role'
+        already_admin: '%user% already has this role'
+        promoted: 'The role %role% has been given to %user%'
 menu:
     translations:
         title: Translations
@@ -181,6 +183,7 @@ menu:
         groupifier: 'Groupifier (with multi-language scorecards support)'
     settings:
         dyslexia: Dyslexia
+        dyslexia_help: 'Activate OpenDyslexic font which is supposedly better for dyslexic people'
 flag_generator:
     intro: "You don't like the flag on your competition badge? You can generate a pdf of your flag here, print it on a sticker paper sheet and distribute your small flag stickers to your fellow cubers who are interested as well. If you know the height of the flag on the badge, you can choose it there. If you don't, just pick the option with a bit of everything and you should be ready for most competitions."
     title: 'Flag stickers generator'

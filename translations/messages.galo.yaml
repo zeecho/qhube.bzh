@@ -111,20 +111,34 @@ admin:
     manage_countries: Mener les payiz
   addpeople:
     title: Ajouter qheuq'un den les pllacements
+    title_many: "Ajouter puzieurs jiens den les pllacements"
+    list_of_wca_id: "Afilonjée d'IDs WCA (yun a chaqe rande)"
   addcountry:
     title: Ajouter un payiz
   addadmin:
-    title: Ajouter un admin
-    already_admin: '%user% ét deja admin'
-    promoted: '%user% ét un admin mézë'
+    title: Ajouter un rôle
+    already_admin: '%user% a deja le role-la'
+    promoted: "Le rôle %role% vient d'étr bâillë a %user%"
 country:
   common:
     name: Nom
     short: Code
     img: Imaïje
   index:
-    title: Liste des payiz
+    title: Afilonjée des payiz
   show:
     title: "Nom:"
   new:
     title: Créer un nouviao payiz
+menu:
+    translations:
+        title: Terlaterie
+        search_projects: Projits
+        search_wca_keys: 'Cllës WCA'
+    tools:
+        title: Afutiaos
+        flag_generator_menu: "Jenerateur de colants de drapiaos"
+        groupifier: 'Groupifier (o la possibletë de fére des feuilles de fezûres mile-parlements)'
+    settings:
+        dyslexia: Delèrance
+        dyslexia_help: "Emouver la fonte OpenDyslexic q'ét censement pus ézée pour les siens q'ont de la delèrance"

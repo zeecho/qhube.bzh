@@ -172,10 +172,12 @@ admin:
         manage_countries: 'Gérer les pays'
     addpeople:
         title: "Ajouter quelqu'un dans les classements"
+        title_many: "Ajouter plusieurs personnes dans les classements"
+        list_of_wca_id: "Liste d'IDs WCA (un par ligne)"
     addadmin:
-        title: 'Ajouter un admin'
-        already_admin: '%user% est déjà admin'
-        promoted: '%user% a été promu admin'
+        title: 'Ajouter un rôle'
+        already_admin: '%user% a déjà ce rôle'
+        promoted: 'Le rôle %role% a été donné à %user%'
 country:
     common:
         name: Nom
@@ -214,6 +216,7 @@ menu:
         groupifier: 'Groupifier (avec possibilité de génération de scorecards multilingues)'
     settings:
         dyslexia: Dyslexie
+        dyslexia_help: 'Activer la police OpenDyslexic qui est potentiellement meilleure pour les personnes dyslexiques'
 vote_cdf:
     page_title: "Coupe de France 2025"
     title: "Choisissez les cubeurs et cubeuses que vous souhaitez voir composer l'équipe outsider pour la coupe de france 2025 !"

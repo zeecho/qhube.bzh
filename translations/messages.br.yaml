@@ -171,12 +171,14 @@ admin:
         manage_countries: 'Ardeiñ ar broioù'
     addpeople:
         title: 'Ouzhpennañ unan bennak er renkadurioù'
+        title_many: 'Ouzhpennañ tud er renkadurioù'
+        list_of_wca_id: 'Roll WCA-ID-où (unan dre linenn)'
     addcountry:
         title: 'Ouzhpennañ ur vro'
     addadmin:
-        title: 'Ouzhpennañ un ardoer'
-        already_admin: "%user% a zo un ardoer c'hoazh"
-        promoted: '%user% a zo bet uhelaet evel ardoer'
+        title: 'Ouzhpennañ ur roll'
+        already_admin: "Ar roll-mañ zo dija gant %user%"
+        promoted: 'Roet eo bet ar roll %role% da %user%'
 country:
     common:
         name: Anv
@@ -215,3 +217,4 @@ menu:
         groupifier: "Groupifier (gant meur a yeazhoù war ar memes follenn disoc'hoù)"
     settings:
         dyslexia:  Disleksiezh
+        dyslexia_help: "Enaouiñ an nodrezh OpenDyslexic hag a zo gwelloc'h evit an dud gant disleksiezh hervez kont"

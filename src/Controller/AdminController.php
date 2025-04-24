@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\PeopleId;
 use App\Form\AddAdminType;
+use App\Form\AddManyPeopleIdType;
 use App\Form\AddPeopleIdType;
 use App\Repository\PeopleIdRepository;
 use App\Repository\UserRepository;
@@ -53,6 +54,42 @@ class AdminController extends AbstractController
     }
 
     #[Route(
+        path: '/add-many-to-rankings',
+        name: 'admin_add_many_people',
+    )]
+    public function addManyPeopleToRankings(Request $request, PeopleIdRepository $peopleIdRepository, FormFactoryInterface $formFactory)
+    {
+        $form = $formFactory->create(AddManyPeopleIdType::class);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $formData = $form->getData();
+            $wcaIds = explode("\n", $formData['wcaIds']);;
+            $nbAdded = 0;
+            $refusedWcaIds = [];
+            foreach ($wcaIds as $wcaId) {
+                $wcaId = trim($wcaId);
+                if (preg_match('/^\d{4}[A-Z]{4}\d{2}$/', $wcaId)) {
+                    $peopleId = new PeopleId();
+                    $peopleId->setWcaId($wcaId);
+                    $peopleId->setCountryCode($formData['country']);
+                    $peopleIdRepository->insertNewPeopleId($peopleId, true);
+                    $nbAdded++;
+                } else {
+                    $refusedWcaIds[] = $wcaId;
+                }
+            }
+            $this->addFlash('info', $nbAdded . ' added ; ' . count($refusedWcaIds) . ' refused: ' . implode(', ', $refusedWcaIds));
+
+            return $this->redirectToRoute('admin_add_many_people');
+        }
+
+        return $this->render('admin/addmanypeople.html.twig', [
+            'form' => $form
+        ]);
+    }
+
+    #[Route(
         path: '/add-admin',
         name: 'admin_addadmin',
     )]
@@ -72,7 +109,7 @@ class AdminController extends AbstractController
             } else {
                 $user->addRole($newRole);
                 $userRepository->save($user, true);
-                $message = $translator->trans('admin.addadmin.promoted', ['%user%' => $user->getName()]);
+                $message = $translator->trans('admin.addadmin.promoted', ['%user%' => $user->getName(), '%role%' => $newRole]);
                 $this->addFlash('success', $message);
             }
 

@@ -163,12 +163,14 @@ admin:
         manage_countries: 'Administri landojn'
     addpeople:
         title: 'Aldoni iun al la rangoj'
+        title_many: 'Aldoni pluraj homoj al la rangoj'
+        list_of_wca_id: 'Listo de WCA-ID-oj (unu per linio)'
     addcountry:
         title: 'Aldoni landon'
     addadmin:
-        title: 'Aldoni administranton'
-        already_admin: '%user% jam estas administranto'
-        promoted: '%user% estis promociita al administranto'
+        title: 'Aldoni rolon'
+        already_admin: '%user% jam havas tiun rolon'
+        promoted: 'Rolo %role% estis donita al %user%'
 flag_generator:
     a_bit_of_everything: 'Iomete da ĉiujn formatoj inter 6 kaj 18 mm'
     flag: Flago
@@ -206,6 +208,7 @@ menu:
         groupifier: 'Groupifier (kun eblo generi multlingvajn rezultfoliojn)'
     settings:
         dyslexia: Disleksio
+        dyslexia_help: 'Aktivigi la tiparon OpenDyslexic kiu onidire estas pli bona por disleksiuloj'
 crud:
     delete: Forigi
     submit: Sendi
