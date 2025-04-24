@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Nation;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -15,6 +16,9 @@ class NationType extends AbstractType
             ->add('name')
             ->add('short')
             ->add('img')
+            ->add('submit', SubmitType::class, [
+                'attr' => ['class' => 'btn btn-light'],
+            ])
         ;
     }
 

@@ -82,6 +82,23 @@ rankings:
         mtq: Martinique
         myt: Mayotte
         reu: La Réunion
+        jey: Jersey
+        ggy: Guernsey
+        imn: Isle of Man
+        aia: Anguilla
+        abw: Aruba
+        bmu: Bermuda
+        bon: Bonaire
+        sta: Sint Eustatius
+        sab: Saba
+        cuw: Curaçao
+        sxm: Sint Maarten
+        pyf: French Polynesia
+        por: Polynesia
+        cyi: Cayman Islands
+        cxr: Christmas Island
+        cck: Cocos (Keeling) Islands
+        cok: Cook Islands
     events:
         333: '3x3x3 Cube'
         222: '2x2x2 Cube'
@@ -191,7 +208,15 @@ country:
     show:
         title: 'Name:'
     new:
-        title: 'Create a new country'
+        title: 'Add a new country'
+    mass_import:
+        title: 'Mass import'
+        format:
+            title: Format
+            explanations: "original_name_of_the_country	three_letters_code	image_name	translation_1	translation_2	…"
+            eg: "e.g.:"
+        added: 'Countries have been added'
+        translations: Translations
 vote_cdf:
     page_title: 'French Cup 2025'
     title: "Choose the cubers you'd like to see on the outsider team for the French Cup 2025!"

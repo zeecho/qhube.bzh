@@ -13,6 +13,7 @@
                 <tr>
                     <th>Id</th>
                     <th>{{ 'country.common.name' | trans }}</th>
+                    <th>{{ 'country.common.name' | trans }} ({{ 'current_language' | trans }})</th>
                     <th>{{ 'country.common.short' | trans }}</th>
                     <th>{{ 'country.common.img' | trans }}</th>
                     <th>{{ 'crud.actions' | trans }}</th>
@@ -22,7 +23,8 @@
             {% for nation in nations %}
                 <tr>
                     <td>{{ nation.id }}</td>
-                    <td>{{ ('rankings.country_names.' ~ nation.short) | trans }} ({{ nation.name }})</td>
+                    <td>{{ nation.name }}</td>
+                    <td>{{ ('rankings.country_names.' ~ nation.short) | trans }}</td>
                     <td>{{ nation.short }}</td>
                     <td><img class="medium-flag" src="{{ asset('flags/' ~ nation.img) }}" alt=""></td>
                     <td>

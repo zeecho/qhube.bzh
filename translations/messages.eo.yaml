@@ -1,110 +1,217 @@
 current_language: Esperanto
 base:
-  search: Serĉi
-  profile: Profilo
-  signin: Ensaluti kun la WCA
-  signout: Elsaluti
-  signin_successful: Sukcese ensalutita kiel %user%
-  signout_successful: Sukcese elsalutita!
+    search: Serĉi
+    profile: Profilo
+    signin: 'Ensaluti kun la WCA'
+    signout: Elsaluti
+    signin_successful: 'Sukcese ensalutita kiel %user%'
+    signout_successful: 'Sukcese elsalutita!'
 home:
-  title: Hejmo
-  welcome: Bonvenon
-language: "Lingvo:"
+    title: Hejmo
+    welcome: Bonvenon
+language: 'Lingvo:'
 submit: Konfirmi
 rankings:
-  title: Rangoj
-  data_from: 'Noto: Krom la landoj, ĉiuj datumoj venas de la %wcaLink% (uzante ilian %wcaExportUrlFirstPart% SQL-Eksportdosieron%wcaExportUrlSecondPart%)'
-  country: Lando
-  code: Landokodo
-  event: Konkursero
-  type: Tipo
-  show: Vidi
-  rankings_for: "Rangoj por:"
-  name: Nomo
-  result: Rezulto
-  competition: Konkurso
-  details: Detalo
-  single: Plej bona tempo
-  average: Mezo
-  country_names:
-    anj: Anĵuo
-    arp: Arpitanio
-    ast: Asturio
-    auv: Aŭvernjo
-    bre: Burgundio
-    bzh: Bretonio
-    cat: Katalunio
-    cha: Ĉampanjo
-    cor: Korsiko
-    cym: Kimrio
-    dau: Daŭfenio
-    els: Alzaco
-    eng: Angulemio
-    euh: Eŭskio
-    for: Forez
-    frc: Franĉkonteo
-    gal: Galegio
-    ker: Kornvalo
-    kur: Kurdio
-    lou: Loreno
-    nor: Normandio
-    occ: Okcitanio
-    poe: Potevio
-    pro: Provenco
-    sav: Savojo
-    sco: Skotlando
-    tué: Nord-Irlando
-  events:
-    '222': Kubo 2x2x2
-    '333': Kubo 3x3x3
-    '444': Kubo 4x4x4
-    '555': Kubo 5x5x5
-    '666': Kubo 6x6x6
-    '777': Kubo 7x7x7
-    333bf: 3x3x3 blinde
-    333fm: 3x3x3 optimuma solvo
-    333oh: 3x3x3 unumane
-    333ft: 3x3x3 piede
-    clock: Kloko
-    minx: Megaminkso
-    pyram: Piraminkso
-    skewb: Skjubo
-    sq1: Skŭaro-1
-    444bf: Kubo 4x4x4 blinde
-    555bf: Kubo 5x5x5 blinde
-    333mbf: 3x3x3 pluraj kuboj blinde
-    333mbo: '3x3x3: pluraj kuboj blinde (malnova stilo)'
-    magic: Maĝiko
-    mmagic: Mastra Maĝiko
+    title: Rangoj
+    data_from: 'Noto: Krom la landoj, ĉiuj datumoj venas de la %wcaLink% (uzante ilian %wcaExportUrlFirstPart% SQL-Eksportdosieron%wcaExportUrlSecondPart%)'
+    country: Lando
+    code: Landokodo
+    event: Konkursero
+    type: Tipo
+    show: Vidi
+    rankings_for: 'Rangoj por:'
+    name: Nomo
+    result: Rezulto
+    competition: Konkurso
+    details: Detalo
+    single: 'Plej bona tempo'
+    average: Mezo
+    country_names:
+        anj: Anĵuo
+        arp: Arpitanio
+        ast: Asturio
+        auv: Aŭvernjo
+        bre: Burgundio
+        bzh: Bretonio
+        cat: Katalunio
+        cha: Ĉampanjo
+        cor: Korsiko
+        cym: Kimrio
+        dau: Daŭfenio
+        els: Alzaco
+        eng: Angulemio
+        euh: Eŭskio
+        for: Forez
+        frc: Franĉkonteo
+        gal: Galegio
+        ker: Kornvalo
+        kur: Kurdio
+        lou: Loreno
+        nor: Normandio
+        occ: Okcitanio
+        poe: Potevio
+        pro: Provenco
+        sav: Savojo
+        sco: Skotlando
+        tué: Nord-Irlando
+        aun: Aŭniso
+        ber: Berio
+        gas: Gaskonio
+        mai: Mansio
+        orl: Orléanais
+        per: Perĉo
+        pic: Pikardio
+        sen: Santonĝo
+        tou: Turlando
+        vlo: Flandrio
+        sap: Sameio
+        sar: Sardio
+        sic: Sicilio
+        ven: Veneto
+        iba: Balearoj
+        pva: Valencilando
+        boa: Bavario
+        wal: Valonio
+        fry: Frislando
+        grl: Gronlando
+        fro: Ferooj
+        ala: Alando
+        ncl: Kanakio
+        glp: Gvadelupo
+        guf: 'Franca Gujano'
+        mtq: Martiniko
+        myt: Majoto
+        reu: Reunio
+        jey: Ĵerzejo
+        ggy: Gernezejo
+        imn: Manksinsulo
+        aia: Angvilo
+        abw: Arubo
+        bmu: Bermudo
+        bon: Bonero
+        sta: 'Sint Eustatius'
+        sab: Saba
+        cuw: Kuracao
+        sxm: Sint-Maarten
+        pyf: 'Franca Polinezio'
+        por: Polinezio
+        cyi: 'Kajmana Insularo'
+        cxr: Kristnaskinsulo
+        cck: Kokosinsuloj
+        cok: Kukinsuloj
+    events:
+        222: 'Kubo 2x2x2'
+        333: 'Kubo 3x3x3'
+        444: 'Kubo 4x4x4'
+        555: 'Kubo 5x5x5'
+        666: 'Kubo 6x6x6'
+        777: 'Kubo 7x7x7'
+        333bf: '3x3x3 blinde'
+        333fm: '3x3x3 optimuma solvo'
+        333oh: '3x3x3 unumane'
+        333ft: '3x3x3 piede'
+        clock: Kloko
+        minx: Megaminkso
+        pyram: Piraminkso
+        skewb: Skjubo
+        sq1: Skŭaro-1
+        444bf: 'Kubo 4x4x4 blinde'
+        555bf: 'Kubo 5x5x5 blinde'
+        333mbf: '3x3x3 pluraj kuboj blinde'
+        333mbo: '3x3x3: pluraj kuboj blinde (malnova stilo)'
+        magic: Maĝiko
+        mmagic: 'Mastra Maĝiko'
 rankings_explanations:
-  intro: Vi povas trovi sur ĉi tiu paĝo la rangojn por landoj ne agnoskitaj de la WCA.
-  what_is_a_country_title: Kio estas lando?
-  what_is_a_country_text: Lando estas nek pli nek malpli ol geografia regiono (foje lando estas sendependa ŝtato sed ne ĉiam).
-  how: Kiel mi povas esti aldonita al rangoj?
-  way_to_join: "Vi povas peti ĝin ĉe la sekva ligilo:"
-  here: tie
+    intro: 'Vi povas trovi sur ĉi tiu paĝo la rangojn por landoj ne agnoskitaj de la WCA.'
+    what_is_a_country_title: 'Kio estas lando?'
+    what_is_a_country_text: 'Lando estas nek pli nek malpli ol geografia regiono (foje lando estas sendependa ŝtato sed ne ĉiam).'
+    how: 'Kiel mi povas esti aldonita al rangoj?'
+    way_to_join: 'Vi povas peti ĝin ĉe la sekva ligilo:'
+    here: tie
 translation:
-  title: Tradukado
+    title: Tradukado
+    projects:
+        titles:
+            comp_tabs: "Langetoj kaj paĝoj de konkursoj"
+    wca_keys:
+        placeholder_example: Ekzemplo
+    search_button: Serĉi
+    search:
+        form:
+            search_string: "Serĉita teksto"
+            search_language: Serĉlingvo
+            target_language: Cellingvo
+        title: "Serĉi tradukojn"
+        has_been_found_in: 'estis trovita en:'
+        key: ŝlosilo
+    search_info_name: serĉo
 join:
-  title: Aliĝi al rangoj
-  criteria: Kondiĉoj
-  criteria_sentence: "Vi povas peti esti aldonita al rangoj se vi estas en unu el la sekvaj kazoj:"
-  criteria_birthplace: Deveni de la lando (esti naskita aŭ kreskigita tie)
-  criteria_family: Havi gepatron aŭ geavon, kiu devenes de aŭ kreskis en ĉi tiu lando
-  criteria_home: Vivi en ĉi tiu lando dum almenaŭ 3 jaroj
-  ask: Peti
-  current_rankings: "Vi estas nuntempe en la sekvaj rangoj:"
-  already_here: "%country%: vi jam estas en la rangoj de ĉi tiu lando"
-  added: "Vi estis aldonita al la rangoj de la sekva lando: %country%"
+    title: 'Aliĝi al rangoj'
+    criteria: Kondiĉoj
+    criteria_sentence: 'Vi povas peti esti aldonita al rangoj se vi estas en unu el la sekvaj kazoj:'
+    criteria_birthplace: 'Deveni de la lando (esti naskita aŭ kreskigita tie)'
+    criteria_family: 'Havi gepatron aŭ geavon, kiu devenes de aŭ kreskis en ĉi tiu lando'
+    criteria_home: 'Vivi en ĉi tiu lando dum almenaŭ 3 jaroj'
+    ask: Peti
+    current_rankings: 'Vi estas nuntempe en la sekvaj rangoj:'
+    already_here: '%country%: vi jam estas en la rangoj de ĉi tiu lando'
+    added: 'Vi estis aldonita al la rangoj de la sekva lando: %country%'
+    too_many_countries: "Vi jam estas en tro multe da landoj (%person_nb_of_countries%). La plej granda nombro da landoj permesita estas %max_nb_of_countries%."
 admin:
-  index:
-    title: Administrantaj ligiloj
-    manage_countries: Administri landojn
-  addpeople:
-    title: Aldoni iun al la rangoj
-  addcountry:
-    title: Aldoni landon
-  addadmin:
-    title: Aldoni administranton
-    already_admin: '%user% jam estas administranto'
-    promoted: '%user% estis promociita al administranto'
+    index:
+        title: 'Administrantaj ligiloj'
+        manage_countries: 'Administri landojn'
+    addpeople:
+        title: 'Aldoni iun al la rangoj'
+    addcountry:
+        title: 'Aldoni landon'
+    addadmin:
+        title: 'Aldoni administranton'
+        already_admin: '%user% jam estas administranto'
+        promoted: '%user% estis promociita al administranto'
+flag_generator:
+    a_bit_of_everything: 'Iomete da ĉiujn formatoj inter 6 kaj 18 mm'
+    flag: Flago
+    flag_height: 'Alto de la flago'
+    format: Formato
+    submit_button: 'Generi flagfolion'
+    title: 'Generilo de flag-glumarkoj'
+    intro: 'Ĉu vi ne ŝatas la flagon kiu troviĝas sur via nomŝildo? Tie vi povas generi pdf-on kun via flago, presi ĝin sur glupapero kaj disdoni viajn flagetojn al viaj amikoj kiuj ankaŭ interesiĝas. Se vi jam konas la alton de la flago sur via nomŝildo, vi povas elekti ĝin. Alie, vi povas elekti "iomete da ĉiajn formatoj" kaj vi havos formatojn kiuj estos bona en la plej multaj konkursoj.'
+country:
+    mass_import:
+        format:
+            title: Formato
+            explanations: "origina_nomo_de_la_lando	triliteran_kodon	bildnomo	traduko_1	traduko_2	…"
+            eg: 'ekz.'
+        added: "Landoj estis aldonitaj"
+        title: "Importi multaj landoj"
+    index:
+        title: Landoj
+    common:
+        name: Nomo
+        short: Kodo
+        img: Bildo
+    show:
+        title: 'Nomo:'
+    new:
+        title: 'Aldoni novan landon'
+menu:
+    translations:
+        title: Tradukoj
+        search_projects: 'Serĉi en projektoj'
+        search_wca_keys: 'Serĉi kun WCA-ŝlosiloj'
+    tools:
+        title: 'Iloj'
+        flag_generator_menu: 'Generilo de flag-glumarkoj'
+        groupifier: 'Groupifier (kun eblo generi multlingvajn rezultfoliojn)'
+    settings:
+        dyslexia: Disleksio
+crud:
+    delete: Forigi
+    submit: Sendi
+    create_new: Krei
+    actions: Agoj
+    show: Montri
+    edit: Redakti
+    no_records_found: 'Neniu rikordo trovita'
+    back_to_list: 'Reen al la listo'

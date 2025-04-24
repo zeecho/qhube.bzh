@@ -1,0 +1,27 @@
+{% extends "admin/admin.html.twig" %}
+
+{% block title %}{{ 'country.mass_import.title' | trans }} — {{ parent() }}{% endblock %}
+
+{% block body %}
+    <a class="btn btn-light" href="{{ path('app_nation_index') }}">{{ 'crud.back_to_list' | trans }}</a>
+
+    <div class="w-50 m-auto">
+        <h1>{{ 'country.mass_import.title' | trans }}</h1>
+        {{ include('nation/_form.html.twig') }}
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            {% for translation in translations %}
+                <div class="col">
+                    {% for code, trad in translation %}
+                        <div class="row">
+                        {{ code }}: {{ trad }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

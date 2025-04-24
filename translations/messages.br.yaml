@@ -1,130 +1,217 @@
 current_language: Brezhoneg
 base:
-  search: Klask
-  profile: Profil
-  signin: Kennaskañ gant an WCA
-  signout: En em zigennaskañ
-  signin_successful: Kennasket gant berzh evel %user%
-  signout_successful: Digennasket gant berzh!
+    search: Klask
+    profile: Profil
+    signin: 'Kennaskañ gant an WCA'
+    signout: 'En em zigennaskañ'
+    signin_successful: 'Kennasket gant berzh evel %user%'
+    signout_successful: 'Digennasket gant berzh!'
 crud:
-  back_to_list: Distreiñ d'ar roll
-  show: Diskouez
-  edit: Embann
-  delete: Dilemel
-  submit: Gwiriekaat
-  actions: Gweredoù
-  create_new: Krouiñ unan nevez
-  no_records_found: Elfenn ebet kavet
+    back_to_list: "Distreiñ d'ar roll"
+    show: Diskouez
+    edit: Embann
+    delete: Dilemel
+    submit: Gwiriekaat
+    actions: Gweredoù
+    create_new: 'Krouiñ unan nevez'
+    no_records_found: 'Elfenn ebet kavet'
 home:
-  title: Degemer
-  welcome: Degemer mat
-language: "Yezh:"
+    title: Degemer
+    welcome: 'Degemer mat'
+language: 'Yezh:'
 rankings:
-  title: Renkadurioù
-  data_from: "Notenn: an holl roadennoù a zeuout eus an %wcaLink% (nemet ar broioù), a-drugarez d'o %wcaExportUrlFirstPart% ezporzh SQL %wcaExportUrlSecondPart%"
-  country: Bro
-  code: Kod ar vro
-  event: Kenstrivadenn
-  type: Seurt
-  show: Gwelet
-  rankings_for: "Renkadur evit :"
-  name: Anv
-  result: Disoc'h
-  competition: Kenstrivadeg
-  details: Munud
-  single: Gwellañ
-  average: Keitad
-  country_names:
-    anj: Anjev
-    arp: Arpitania
-    ast: Asturiez
-    auv: Aovergn
-    bre: Bourgogn
-    bzh: Breizh
-    cat: Katalonia
-    cha: Champagn
-    cor: Korsika
-    cym: Kembre
-    dau: Daofinez
-    els: Elzas
-    eng: Angoumois
-    euh: Bro-Vask
-    for: Forez
-    frc: Frank-Kontelezh
-    gal: Galiza
-    ker: Kernev-Veur
-    kur: Kurdistan
-    lou: Loren
-    nor: Normandi
-    occ: Okitania
-    poe: Poatev
-    pro: Provañs
-    sav: Savoia
-    sco: Skos
-    tué: Norzhiwerzhon
-  events:
-    '222': Diñs 2x2x2
-    '333': Diñs 3x3x3
-    '444': Diñs 4x4x4
-    '555': Diñs 5x5x5
-    '666': Diñs 6x6x6
-    '777': Diñs 7x7x7
-    333bf: 3x3x3 dall
-    333fm: 3x3x3 Diluziadur Gwellekaet
-    333oh: 3x3x3 gant un dorn
-    333ft: 3x3x3 gant an treid
-    clock: Clock
-    minx: Megaminx
-    pyram: Pyraminx
-    skewb: Skewb
-    sq1: Square-1
-    444bf: 4x4x4 dall
-    555bf: 5x5x5 dall
-    333mbf: 3x3x3 meur a hini dall
-    magic: Magic
-    mmagic: Master Magic
-    333mbo: 3x3x3 meur a hini dall (mod kozh)
-rankings_explanations:
-  intro: War ar bajenn-mañ e c'hallit kavout renkadurioù evit broioù n'int ket anavezet gant ar WCA.
-  what_is_a_country_title: Petra eo ur vro?
-  what_is_a_country_text: Un vro a zo hepken un tolead jeografik (a-wechoù ur stad dizalc'h met pas bepred).
-  how: Penaos bezañ ouzhpennet en ur renkadur?
-  way_to_join: "Posubl eo goulenn war al liamm-mañ :"
-  here: amañ
-translation:
-  title: Troidigezh
-join:
-  title: Bezañ ouzhpennet en ur renkadur
-  criteria: Divizoù
-  criteria_sentence: "Gallout a rit goulenn bezañ ouzhpennet d'ur renkadur ma'z eo gwir unan eus an divizoù-mañ :"
-  criteria_birthplace: Bezañ eus ar vro (ganet pe savet amañ)
-  criteria_family: Kaout tud (tad pe mamm) pe tud-kozh hag a zo eus ar vro
-  criteria_home: Chom er vro e-pad 3 bloaz d'an nebeutañ
-  ask: Goulenn
-  current_rankings: "Er renkadurioù-se emaoc'h bremañ:"
-  already_here: "Emaoc'h er renkadurioù %country% c'hoazh"
-  too_many_countries: "Emaoc'h er re a vroioù c'hoazh (%person_nb_of_countries%). %max_nb_of_countries% eo an niver brasañ posupl."
-  added: "Ouzhpennet oc'h bet er renkadurioù %country%"
-admin:
-  index:
-    title: Ereoù ardoadur
-    manage_countries: Ardeiñ ar broioù
-  addpeople:
-    title: Ouzhpennañ unan bennak er renkadurioù
-  addcountry:
-    title: Ouzhpennañ ur vro
-  addadmin:
-    title: Ouzhpennañ un ardoer
-    already_admin: "%user% a zo un ardoer c'hoazh"
-    promoted: '%user% a zo bet uhelaet evel ardoer'
-country:
-  common:
+    title: Renkadurioù
+    data_from: "Notenn: an holl roadennoù a zeuout eus an %wcaLink% (nemet ar broioù), a-drugarez d'o %wcaExportUrlFirstPart% ezporzh SQL %wcaExportUrlSecondPart%"
+    country: Bro
+    code: 'Kod ar vro'
+    event: Kenstrivadenn
+    type: Seurt
+    show: Gwelet
+    rankings_for: 'Renkadur evit :'
     name: Anv
-    short: Code
-    img: Skeudenn
-  index:
-    title: Roll ar broioù
-  show:
-    title: "Bro:"
-  new:
-    title: Krouiñ ur bro nevez
+    result: "Disoc'h"
+    competition: Kenstrivadeg
+    details: Munud
+    single: Gwellañ
+    average: Keitad
+    country_names:
+        anj: Anjev
+        arp: Arpitania
+        ast: Asturiez
+        auv: Aovergn
+        bre: Bourgogn
+        bzh: Breizh
+        cat: Katalonia
+        cha: Champagn
+        cor: Korsika
+        cym: Kembre
+        dau: Daofinez
+        els: Elzas
+        eng: Angoumois
+        euh: Bro-Vask
+        for: Forez
+        frc: Frank-Kontelezh
+        gal: Galiza
+        ker: Kernev-Veur
+        kur: Kurdistan
+        lou: Loren
+        nor: Normandi
+        occ: Okitania
+        poe: Poatev
+        pro: Provañs
+        sav: Savoia
+        sco: Skos
+        tué: Norzhiwerzhon
+        aun: Aunis
+        ber: Berry
+        gas: Gwaskogn
+        mai: Maine
+        orl: Bro-Orleañs
+        per: Perch
+        pic: Pikardi
+        sen: Sentoñj
+        tou: Touren
+        vlo: Flandrez
+        sap: Sápmi
+        sar: Sardigna
+        sic: Sikilia
+        ven: Veneto
+        iba: Balearez
+        pva: Bro-València
+        boa: Bavaria
+        wal: Wallonia
+        fry: Friz
+        grl: Greunland
+        fro: Faero
+        ala: Åland
+        ncl: Kanaky
+        glp: Gwadeloup
+        guf: Gwiana
+        mtq: Martinik
+        myt: Mayotte
+        reu: Enez ar Reünion
+        jey: Jerzenez
+        ggy: Gwernenez
+        imn: Manav
+        aia: Anguilla
+        abw: Aruba
+        bmu: Bermuda
+        bon: Bonaire
+        sta: Statia
+        sab: Saba
+        cuw: Kòrsou
+        sxm: Sint Maarten
+        pyf: Polinezia C'hall
+        por: Polinezia
+        cyi: Inizi Cayman
+        cxr: Enez Christmas
+        cck: Inizi Cocos (Keeling)
+        cok: Inizi Cook
+    events:
+        222: 'Diñs 2x2x2'
+        333: 'Diñs 3x3x3'
+        444: 'Diñs 4x4x4'
+        555: 'Diñs 5x5x5'
+        666: 'Diñs 6x6x6'
+        777: 'Diñs 7x7x7'
+        333bf: '3x3x3 dall'
+        333fm: '3x3x3 Diluziadur Gwellekaet'
+        333oh: '3x3x3 gant un dorn'
+        333ft: '3x3x3 gant an treid'
+        clock: Clock
+        minx: Megaminx
+        pyram: Pyraminx
+        skewb: Skewb
+        sq1: Square-1
+        444bf: '4x4x4 dall'
+        555bf: '5x5x5 dall'
+        333mbf: '3x3x3 meur a hini dall'
+        magic: Magic
+        mmagic: 'Master Magic'
+        333mbo: '3x3x3 meur a hini dall (mod kozh)'
+rankings_explanations:
+    intro: "War ar bajenn-mañ e c'hallit kavout renkadurioù evit broioù n'int ket anavezet gant ar WCA."
+    what_is_a_country_title: 'Petra eo ur vro?'
+    what_is_a_country_text: "Un vro a zo hepken un tolead jeografik (a-wechoù ur stad dizalc'h met pas bepred)."
+    how: 'Penaos bezañ ouzhpennet en ur renkadur?'
+    way_to_join: 'Posubl eo goulenn war al liamm-mañ :'
+    here: amañ
+translation:
+    title: Troidigezh
+    projects:
+        titles:
+            comp_tabs: "Ivinelloù ha pajennoù ar c'henstrivadegoù"
+    wca_keys:
+        placeholder_example: Skouer
+    search_button: Klask
+    search:
+        form:
+            search_string: 'Hedad klasket'
+            search_language: "Yezh ar c'hlask"
+            target_language: "Yezhoù tal"
+        title: 'Troidigezh'
+        has_been_found_in: 'kavet eo bet e:'
+        key: "Alc'hwez"
+    search_info_name: klask
+join:
+    title: 'Bezañ ouzhpennet en ur renkadur'
+    criteria: Divizoù
+    criteria_sentence: "Gallout a rit goulenn bezañ ouzhpennet d'ur renkadur ma'z eo gwir unan eus an divizoù-mañ :"
+    criteria_birthplace: 'Bezañ eus ar vro (ganet pe savet amañ)'
+    criteria_family: 'Kaout tud (tad pe mamm) pe tud-kozh hag a zo eus ar vro'
+    criteria_home: "Chom er vro e-pad 3 bloaz d'an nebeutañ"
+    ask: Goulenn
+    current_rankings: "Er renkadurioù-se emaoc'h bremañ:"
+    already_here: "Emaoc'h er renkadurioù %country% c'hoazh"
+    too_many_countries: "Emaoc'h er re a vroioù c'hoazh (%person_nb_of_countries%). %max_nb_of_countries% eo an niver brasañ posupl."
+    added: "Ouzhpennet oc'h bet er renkadurioù %country%"
+admin:
+    index:
+        title: 'Ereoù ardoadur'
+        manage_countries: 'Ardeiñ ar broioù'
+    addpeople:
+        title: 'Ouzhpennañ unan bennak er renkadurioù'
+    addcountry:
+        title: 'Ouzhpennañ ur vro'
+    addadmin:
+        title: 'Ouzhpennañ un ardoer'
+        already_admin: "%user% a zo un ardoer c'hoazh"
+        promoted: '%user% a zo bet uhelaet evel ardoer'
+country:
+    common:
+        name: Anv
+        short: Code
+        img: Skeudenn
+    index:
+        title: 'Roll ar broioù'
+    show:
+        title: 'Bro:'
+    new:
+        title: 'Ouzhpennañ ur bro nevez'
+    mass_import:
+        title: 'Enporzhiañ meur a vroioù'
+        format:
+            title: Mentrezh
+            explanations: "anv_orin_ar_bro	kod_teir_lizherenn	anv_ar_skeudenn	troidigezh_1	troidigezh_2	…"
+            eg: "da skouer:"
+        added: 'Ouzhpennet eo bet ar broioù'
+        translations: Troidigezhioù
+flag_generator:
+    a_bit_of_everything: 'Un tamm eus pep tra etre 6 ha 18 mm'
+    flag: Banniel
+    flag_height: "Sav ar banniel"
+    format: Mentrezh
+    submit_button: "Genel follenn ar bannieloù"
+    title: "Ganerez pegsunioù bannieloù"
+    intro: "Ne blij ket deoc'h ar banniel hag a zo war ho padj? Amañ e c'hallit genel ur pdf gant ho panniel, moullañ anezhañ war paper pegsun ha dasparzhañ ho panniel bihan d'ho kamaraded hag a zo dedennet ivez. Ma vez gouezet sav ar banniel ganeoc'h e c'hallit dibab anezhañ. A-hend-all e c'hallit dibab \"un tamm eus pep tra\" ha normalamant e vo mat evit an darn vrasañ eus ar c'henstrivadegoù."
+menu:
+    translations:
+        title: Troidigezhioù
+        search_projects: Raktresoù
+        search_wca_keys: "Alc'hezioù WCA"
+    tools:
+        title: Ostilhoù
+        flag_generator_menu: "Ganerez pegsunioù bannieloù"
+        groupifier: "Groupifier (gant meur a yeazhoù war ar memes follenn disoc'hoù)"
+    settings:
+        dyslexia:  Disleksiezh

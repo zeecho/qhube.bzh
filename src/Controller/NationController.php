@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Nation;
+use App\Form\NationMassImportType;
 use App\Form\NationType;
 use App\Repository\NationRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -40,6 +41,39 @@ class NationController extends AbstractController
         return $this->renderForm('nation/new.html.twig', [
             'nation' => $nation,
             'form' => $form,
+        ]);
+    }
+
+    #[Route('/mass-import', name: 'app_nation_mass_import', methods: ['GET', 'POST'])]
+    public function massImport(Request $request, NationRepository $nationRepository, TranslatorInterface $translator): Response
+    {
+        $form = $this->createForm(NationMassImportType::class);
+        $form->handleRequest($request);
+        $translations = [];
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $data = $form->getData()['tsv'];
+            $dataArray = explode("\n", $data);
+            foreach ($dataArray as $nationLine) {
+                $nationData = explode("\t", $nationLine);
+                $nation = new Nation();
+                $code = $nationData[1];
+                $nation->setName($nationData[0]);
+                $nation->setShort($code);
+                $nation->setImg($nationData[2]);
+                foreach ($nationData as $key => $nationDatum) {
+                    if ($key > 2) {
+                        $translations[$key][$code] = $nationDatum;
+                    }
+                }
+                $nationRepository->save($nation, true);
+            }
+            $this->addFlash('success', $translator->trans('country.mass_import.added'));
+        }
+
+        return $this->render('nation/mass_import.html.twig', [
+            'form' => $form,
+            'translations' => $translations
         ]);
     }
 

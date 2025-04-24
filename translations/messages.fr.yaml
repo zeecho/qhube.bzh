@@ -90,6 +90,23 @@ rankings:
         mtq: Martinique
         myt: Mayotte
         reu: 'La Réunion'
+        jey: Jersey
+        ggy: Guernesey
+        imn: Ile de Man
+        aia: Anguilla
+        abw: Aruba
+        bmu: Bermudes
+        bon: Bonaire
+        sta: Saint-Eustache
+        sab: Saba
+        cuw: Curaçao
+        sxm: Sint Maarten
+        pyf: Polynésie française
+        por: Polynésie
+        cyi: Iles Caïmans
+        cxr: Ile Christmas
+        cck: Iles Cocos
+        cok: Iles Cook
     events:
         222: 'Cube 2x2x2'
         333: 'Cube 3x3x3'
@@ -169,7 +186,15 @@ country:
     show:
         title: 'Nom:'
     new:
-        title: 'Créer un nouveau pays'
+        title: 'Ajouter un nouveau pays'
+    mass_import:
+        title: 'Import massif'
+        format:
+            title: Format
+            explanations: "nom_du_pays_en_version_originale	code_de_trois_lettres	nom_de_l_image	traduction_1	traduction_2	…"
+            eg: "par ex.:"
+        added: 'Les pays ont été ajoutés'
+        translations: Traductions
 flag_generator:
     a_bit_of_everything: 'Un peu de tout entre 6mm et 18mm'
     flag: Drapeau

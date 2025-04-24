@@ -4,6 +4,7 @@
 
 {% block body %}
     <a class="btn btn-light" href="{{ path('app_nation_index') }}">{{ 'crud.back_to_list' | trans }}</a>
+    <a class="btn btn-light" href="{{ path('app_nation_mass_import') }}">{{ 'country.mass_import.title' | trans }}</a>
 
     <div class="w-50 m-auto">
         <h1>{{ 'country.new.title' | trans }} {{ nation.name }}</h1>
