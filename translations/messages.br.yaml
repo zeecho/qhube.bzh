@@ -191,7 +191,7 @@ country:
     new:
         title: 'Ouzhpennañ ur bro nevez'
     mass_import:
-        title: 'Enporzhiañ meur a vroioù'
+        title: 'Enporzhiañ meur a vro'
         format:
             title: Mentrezh
             explanations: "anv_orin_ar_bro	kod_teir_lizherenn	anv_ar_skeudenn	troidigezh_1	troidigezh_2	…"
@@ -214,7 +214,7 @@ menu:
     tools:
         title: Ostilhoù
         flag_generator_menu: "Ganerez pegsunioù bannieloù"
-        groupifier: "Groupifier (gant meur a yeazhoù war ar memes follenn disoc'hoù)"
+        groupifier: "Groupifier (gant meur a yezh war ar memes follenn disoc'hoù)"
     settings:
         dyslexia:  Disleksiezh
         dyslexia_help: "Enaouiñ an nodrezh OpenDyslexic hag a zo gwelloc'h evit an dud gant disleksiezh hervez kont"
