@@ -157,6 +157,15 @@
         {% endfor %}
 
         {% block body %}{% endblock %}
+
+        {% block footer %}
+                <footer class="py-3 my-4">
+                    <p class="text-center border-top pt-3 mt-3">
+                        <a class="text-info text-decoration-none" href="https://github.com/zeecho/qhube.bzh" target="_blank">Github</a>
+                    </p>
+                </footer>
+        {% endblock %}
+
     </div>
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
