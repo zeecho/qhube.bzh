@@ -116,12 +116,12 @@ class TranslationController extends AbstractController
                         continue;
                     }
 
+                    $targetLanguage = str_replace('_', '-', $targetLanguage);
                     $data = $dataGenerator->generateData($projectKey, $projectInfo, $targetLanguage);
 
                     if (!array_key_exists($targetLanguage, $data)) {
                         continue;
                     }
-
                     $data = $data[$targetLanguage];
 
                     foreach ($translations[$projectKey] as $key => $translation) {
