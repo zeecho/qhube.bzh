@@ -25,6 +25,10 @@
 .form-title {
     font-weight: bold;
 }
+.form-check-search-targetlanguages {
+  margin-right: 0;
+  padding-left: 0.6em;
+}
 .orange {
     color: orange !important;
 }
